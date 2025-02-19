@@ -1,0 +1,86 @@
+[
+    {
+        "dx": 50,
+        "dy": 15,
+        "index": 1,
+        "name": "Filter..."
+    },
+    {
+        "dx": 50,
+        "dy": 49,
+        "index": 2,
+        "name": "Show Filter"
+    },
+    {
+        "dx": 48,
+        "dy": 72,
+        "index": 3,
+        "name": "Apply to Worksheets >"
+    },
+    {
+        "dx": 48,
+        "dy": 104,
+        "index": 4,
+        "name": "Format..."
+    },
+    {
+        "dx": 48,
+        "dy": 124,
+        "index": 5,
+        "name": "Include in Tooltip"
+    },
+    {
+        "dx": 47,
+        "dy": 161,
+        "index": 6,
+        "name": "Dimension"
+    },
+    {
+        "dx": 50,
+        "dy": 185,
+        "index": 7,
+        "name": "Attribute"
+    },
+    {
+        "dx": 49,
+        "dy": 210,
+        "index": 8,
+        "name": "Measure (Sum) >"
+    },
+    {
+        "dx": 50,
+        "dy": 241,
+        "index": 9,
+        "name": "Discrete"
+    },
+    {
+        "dx": 50,
+        "dy": 264,
+        "index": 10,
+        "name": "Continuous"
+    },
+    {
+        "dx": 48,
+        "dy": 298,
+        "index": 11,
+        "name": "Edit in Shelf"
+    },
+    {
+        "dx": 50,
+        "dy": 332,
+        "index": 12,
+        "name": "Add Table Calculation..."
+    },
+    {
+        "dx": 50,
+        "dy": 359,
+        "index": 13,
+        "name": "Quick Table Calculation >"
+    },
+    {
+        "dx": 50,
+        "dy": 389,
+        "index": 14,
+        "name": "Remove"
+    }
+]

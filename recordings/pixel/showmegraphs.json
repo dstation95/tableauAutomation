@@ -1,0 +1,146 @@
+[
+    {
+        "dx": -98,
+        "dy": 55,
+        "index": 1,
+        "name": "Text Table (Crosstab) - Requires: 1 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": -34,
+        "dy": 55,
+        "index": 2,
+        "name": "Heat Map - Requires: 1 or more dimensions, 1 or 2 measures"
+    },
+    {
+        "dx": 24,
+        "dy": 56,
+        "index": 3,
+        "name": "Highlight Table - Requires: 1 or more dimensions, 1 measures"
+    },
+    {
+        "dx": -99,
+        "dy": 102,
+        "index": 4,
+        "name": "Symbol Map - Requires: 1 geographical dimension, 0 or more dimensions, 0 to 2 measures"
+    },
+    {
+        "dx": -33,
+        "dy": 102,
+        "index": 5,
+        "name": "Filled Map - Requires: 1 geographical dimension, 0 or more dimensions, 0 or 1 measure"
+    },
+    {
+        "dx": 23,
+        "dy": 102,
+        "index": 6,
+        "name": "Pie Chart - Requires: 1 or more dimensions, 1 or 2 measures"
+    },
+    {
+        "dx": -104,
+        "dy": 147,
+        "index": 7,
+        "name": "Horizontal Bar Chart - Requires: 0 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": -39,
+        "dy": 147,
+        "index": 8,
+        "name": "Stacked Bar Chart - Requires: 1 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": 24,
+        "dy": 144,
+        "index": 9,
+        "name": "Side-by-Side Bar Chart - Requires: 1 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": -100,
+        "dy": 194,
+        "index": 10,
+        "name": "Tree Map - Requires: 1 or more dimensions, 1 or 2 measures"
+    },
+    {
+        "dx": -40,
+        "dy": 191,
+        "index": 11,
+        "name": "Circle View - Requires: 1 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": 23,
+        "dy": 197,
+        "index": 12,
+        "name": "Side-by-Side Circle View - Requires: 1 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": -101,
+        "dy": 239,
+        "index": 13,
+        "name": "Continuous Line Chart - Requires: 1 date dimension, 0 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": -43,
+        "dy": 239,
+        "index": 14,
+        "name": "Discrete Line Chart - Requires: 1 date dimension, 0 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": 19,
+        "dy": 237,
+        "index": 15,
+        "name": "Dual-Line Chart - Requires: 1 date dimension, 0 or more dimensions, 2 measures"
+    },
+    {
+        "dx": -101,
+        "dy": 286,
+        "index": 16,
+        "name": "Area Chart Continious - Requires: 1 date dimension, 0 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": -40,
+        "dy": 286,
+        "index": 17,
+        "name": "Area Chart Discsrete - Requires: 1 date dimension, 0 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": 24,
+        "dy": 286,
+        "index": 18,
+        "name": "Dual Combination 1 data dimension, 0 or more dimesnions, and 2 measures"
+    },
+    {
+        "dx": -101,
+        "dy": 331,
+        "index": 19,
+        "name": "Scatter Plot - Requires: 0 or more dimensions, 2 to 4 measures"
+    },
+    {
+        "dx": -38,
+        "dy": 331,
+        "index": 20,
+        "name": "Histogram - 1 measure"
+    },
+    {
+        "dx": 21,
+        "dy": 331,
+        "index": 21,
+        "name": "Box-and-Whisker Plot - Requires: 0 or more dimensions, 1 or more measures"
+    },
+    {
+        "dx": -97,
+        "dy": 377,
+        "index": 22,
+        "name": "Gantt view: 1 date dimesnions, 1 or more dimesnions, 0 to 2 measures"
+    },
+    {
+        "dx": -39,
+        "dy": 374,
+        "index": 23,
+        "name": "Bullet Graphs: 0 or more dimesnions, 2 Measures"
+    },
+    {
+        "dx": 25,
+        "dy": 379,
+        "index": 24,
+        "name": "Packed Bubbles: 1 or more dimension, 1 or 2 Measures"
+    }
+]

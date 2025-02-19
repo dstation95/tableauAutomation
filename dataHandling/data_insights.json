@@ -1,0 +1,927 @@
+{
+    "FL_DATE": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 31,
+        "top_values": {
+            "10/11/2024 12:00:00 AM": 21548,
+            "10/10/2024 12:00:00 AM": 21539,
+            "10/14/2024 12:00:00 AM": 21502
+        }
+    },
+    "OP_UNIQUE_CARRIER": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 15,
+        "top_values": {
+            "WN": 119251,
+            "DL": 88300,
+            "AA": 86812
+        }
+    },
+    "ORIGIN": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 337,
+        "top_values": {
+            "ATL": 29837,
+            "DFW": 27861,
+            "DEN": 26929
+        }
+    },
+    "ORIGIN_CITY_NAME": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 331,
+        "top_values": {
+            "Chicago, IL": 31955,
+            "Atlanta, GA": 29837,
+            "Dallas/Fort Worth, TX": 27861
+        }
+    },
+    "ORIGIN_STATE_ABR": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 52,
+        "top_values": {
+            "TX": 66170,
+            "CA": 66070,
+            "FL": 48048
+        }
+    },
+    "DEST": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 337,
+        "top_values": {
+            "ATL": 29852,
+            "DFW": 27862,
+            "DEN": 26930
+        }
+    },
+    "DEST_CITY_NAME": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 331,
+        "top_values": {
+            "Chicago, IL": 31934,
+            "Atlanta, GA": 29852,
+            "Dallas/Fort Worth, TX": 27862
+        }
+    },
+    "DEST_STATE_ABR": {
+        "data_type": "object",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "unique_values_count": 52,
+        "top_values": {
+            "TX": 66176,
+            "CA": 66076,
+            "FL": 48089
+        }
+    },
+    "DEP_DELAY": {
+        "data_type": "float64",
+        "non_null_count": 609295,
+        "missing_values": 6202,
+        "missing_percent": 1.01,
+        "mean": 5.443071090358529,
+        "std": 41.1277616539899,
+        "min": -66.0,
+        "median": -3.0,
+        "max": 2711.0,
+        "skew": 14.27918479752005,
+        "kurtosis": 368.52846665506064,
+        "outliers_count": 71298,
+        "outliers_percent": 11.7
+    },
+    "DEP_DEL15": {
+        "data_type": "float64",
+        "non_null_count": 609295,
+        "missing_values": 6202,
+        "missing_percent": 1.01,
+        "mean": 0.13605560524868907,
+        "std": 0.3428478823738698,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0,
+        "skew": 2.123068055091872,
+        "kurtosis": 2.5074179665515803,
+        "outliers_count": 82898,
+        "outliers_percent": 13.61
+    },
+    "ARR_DELAY": {
+        "data_type": "float64",
+        "non_null_count": 608514,
+        "missing_values": 6983,
+        "missing_percent": 1.13,
+        "mean": -1.2827363051630694,
+        "std": 42.46992850703967,
+        "min": -91.0,
+        "median": -9.0,
+        "max": 2684.0,
+        "skew": 12.811046596115872,
+        "kurtosis": 316.9849666175213,
+        "outliers_count": 46290,
+        "outliers_percent": 7.61
+    },
+    "ARR_DEL15": {
+        "data_type": "float64",
+        "non_null_count": 608514,
+        "missing_values": 6983,
+        "missing_percent": 1.13,
+        "mean": 0.13203147339255958,
+        "std": 0.33852526014008927,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0,
+        "skew": 2.1739519751384595,
+        "kurtosis": 2.7260671902084095,
+        "outliers_count": 80343,
+        "outliers_percent": 13.2
+    },
+    "CANCELLED": {
+        "data_type": "float64",
+        "non_null_count": 615497,
+        "missing_values": 0,
+        "missing_percent": 0.0,
+        "mean": 0.010209635465323146,
+        "std": 0.10052569436362883,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1.0,
+        "skew": 9.744588495861816,
+        "kurtosis": 92.95700495368254,
+        "outliers_count": 6284,
+        "outliers_percent": 1.02
+    },
+    "CANCELLATION_CODE": {
+        "data_type": "object",
+        "non_null_count": 6284,
+        "missing_values": 609213,
+        "missing_percent": 98.98,
+        "unique_values_count": 4,
+        "top_values": {
+            "B": 4966,
+            "A": 676,
+            "C": 640
+        }
+    },
+    "CARRIER_DELAY": {
+        "data_type": "float64",
+        "non_null_count": 80343,
+        "missing_values": 535154,
+        "missing_percent": 86.95,
+        "mean": 26.059980334316617,
+        "std": 75.64466113904251,
+        "min": 0.0,
+        "median": 4.0,
+        "max": 2672.0,
+        "skew": 9.96346241749421,
+        "kurtosis": 155.21464382785445,
+        "outliers_count": 8372,
+        "outliers_percent": 10.42
+    },
+    "WEATHER_DELAY": {
+        "data_type": "float64",
+        "non_null_count": 80343,
+        "missing_values": 535154,
+        "missing_percent": 86.95,
+        "mean": 2.0602168203826094,
+        "std": 26.335049780040595,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1317.0,
+        "skew": 23.965234901924905,
+        "kurtosis": 739.4272002938893,
+        "outliers_count": 1830,
+        "outliers_percent": 2.28
+    },
+    "NAS_DELAY": {
+        "data_type": "float64",
+        "non_null_count": 80343,
+        "missing_values": 535154,
+        "missing_percent": 86.95,
+        "mean": 9.926415493571312,
+        "std": 22.452473729305616,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1076.0,
+        "skew": 9.616468323232189,
+        "kurtosis": 233.95230027518184,
+        "outliers_count": 4721,
+        "outliers_percent": 5.88
+    },
+    "SECURITY_DELAY": {
+        "data_type": "float64",
+        "non_null_count": 80343,
+        "missing_values": 535154,
+        "missing_percent": 86.95,
+        "mean": 0.11144717025752088,
+        "std": 3.078305787052661,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 512.0,
+        "skew": 82.9307034847799,
+        "kurtosis": 10987.000943578421,
+        "outliers_count": 332,
+        "outliers_percent": 0.41
+    },
+    "LATE_AIRCRAFT_DELAY": {
+        "data_type": "float64",
+        "non_null_count": 80343,
+        "missing_values": 535154,
+        "missing_percent": 86.95,
+        "mean": 22.80787374133403,
+        "std": 54.18087926028361,
+        "min": 0.0,
+        "median": 0.0,
+        "max": 1756.0,
+        "skew": 7.93224802438453,
+        "kurtosis": 118.17487384102785,
+        "outliers_count": 7852,
+        "outliers_percent": 9.77
+    },
+    "relationship_insights": {
+        "significant_numeric_correlations": {
+            "DEP_DELAY vs ARR_DELAY": {
+                "pearson_r": 0.9614,
+                "p_value": 0.0
+            },
+            "DEP_DELAY vs CARRIER_DELAY": {
+                "pearson_r": 0.7405,
+                "p_value": 0.0
+            },
+            "DEP_DEL15 vs ARR_DEL15": {
+                "pearson_r": 0.7241,
+                "p_value": 0.0
+            },
+            "ARR_DELAY vs CARRIER_DELAY": {
+                "pearson_r": 0.7436,
+                "p_value": 0.0
+            }
+        },
+        "groupby_summary": {
+            "FL_DATE": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "FL_DATE": "10/11/2024 12:00:00 AM",
+                        "mean": 10.68870392390012,
+                        "count": 21025
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/29/2024 12:00:00 AM",
+                        "mean": 0.9103712466903273,
+                        "count": 17751
+                    },
+                    "relative_difference": 10.74
+                },
+                "DEP_DEL15": {
+                    "highest_group": {
+                        "FL_DATE": "10/11/2024 12:00:00 AM",
+                        "mean": 0.1928180737217598,
+                        "count": 21025
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/9/2024 12:00:00 AM",
+                        "mean": 0.08221505011041277,
+                        "count": 17661
+                    },
+                    "relative_difference": 1.35
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "FL_DATE": "10/18/2024 12:00:00 AM",
+                        "mean": 4.621246789633434,
+                        "count": 21415
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/29/2024 12:00:00 AM",
+                        "mean": -7.756849701206449,
+                        "count": 17738
+                    },
+                    "relative_difference": 1.6
+                },
+                "ARR_DEL15": {
+                    "highest_group": {
+                        "FL_DATE": "10/18/2024 12:00:00 AM",
+                        "mean": 0.19528367966378707,
+                        "count": 21415
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/29/2024 12:00:00 AM",
+                        "mean": 0.07413462622618108,
+                        "count": 17738
+                    },
+                    "relative_difference": 1.63
+                },
+                "CANCELLED": {
+                    "highest_group": {
+                        "FL_DATE": "10/10/2024 12:00:00 AM",
+                        "mean": 0.09410836157667486,
+                        "count": 21539
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/19/2024 12:00:00 AM",
+                        "mean": 0.0006258534365043241,
+                        "count": 17576
+                    },
+                    "relative_difference": 149.37
+                },
+                "CARRIER_DELAY": {
+                    "highest_group": {
+                        "FL_DATE": "10/22/2024 12:00:00 AM",
+                        "mean": 38.14494680851064,
+                        "count": 1504
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/31/2024 12:00:00 AM",
+                        "mean": 20.61626617375231,
+                        "count": 2705
+                    },
+                    "relative_difference": 0.85
+                },
+                "WEATHER_DELAY": {
+                    "highest_group": {
+                        "FL_DATE": "10/9/2024 12:00:00 AM",
+                        "mean": 9.803172314347513,
+                        "count": 1387
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/22/2024 12:00:00 AM",
+                        "mean": 0.42154255319148937,
+                        "count": 1504
+                    },
+                    "relative_difference": 22.26
+                },
+                "NAS_DELAY": {
+                    "highest_group": {
+                        "FL_DATE": "10/3/2024 12:00:00 AM",
+                        "mean": 15.491975106452669,
+                        "count": 3053
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/12/2024 12:00:00 AM",
+                        "mean": 6.6768603465851175,
+                        "count": 1962
+                    },
+                    "relative_difference": 1.32
+                },
+                "SECURITY_DELAY": {
+                    "highest_group": {
+                        "FL_DATE": "10/19/2024 12:00:00 AM",
+                        "mean": 0.3637311099531006,
+                        "count": 1919
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/17/2024 12:00:00 AM",
+                        "mean": 0.027472527472527472,
+                        "count": 3822
+                    },
+                    "relative_difference": 12.24
+                },
+                "LATE_AIRCRAFT_DELAY": {
+                    "highest_group": {
+                        "FL_DATE": "10/3/2024 12:00:00 AM",
+                        "mean": 31.290206354405502,
+                        "count": 3053
+                    },
+                    "lowest_group": {
+                        "FL_DATE": "10/16/2024 12:00:00 AM",
+                        "mean": 14.480052038161318,
+                        "count": 2306
+                    },
+                    "relative_difference": 1.16
+                }
+            },
+            "OP_UNIQUE_CARRIER": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "F9",
+                        "mean": 13.48933580618987,
+                        "count": 17254
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "YX",
+                        "mean": -1.5890506912442397,
+                        "count": 27125
+                    },
+                    "relative_difference": 9.49
+                },
+                "DEP_DEL15": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "F9",
+                        "mean": 0.23467022139793672,
+                        "count": 17254
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "YX",
+                        "mean": 0.06370506912442396,
+                        "count": 27125
+                    },
+                    "relative_difference": 2.68
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "F9",
+                        "mean": 9.859926918392205,
+                        "count": 17241
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "YX",
+                        "mean": -8.311035678707155,
+                        "count": 27103
+                    },
+                    "relative_difference": 2.19
+                },
+                "ARR_DEL15": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "F9",
+                        "mean": 0.2427353401774839,
+                        "count": 17241
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "9E",
+                        "mean": 0.07877383710568527,
+                        "count": 16833
+                    },
+                    "relative_difference": 2.08
+                },
+                "CARRIER_DELAY": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "OO",
+                        "mean": 46.219277839587335,
+                        "count": 9887
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "AS",
+                        "mean": 14.377473806752038,
+                        "count": 3436
+                    },
+                    "relative_difference": 2.21
+                },
+                "WEATHER_DELAY": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "G4",
+                        "mean": 7.362730061349693,
+                        "count": 1304
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "HA",
+                        "mean": 0.07866507747318235,
+                        "count": 839
+                    },
+                    "relative_difference": 92.6
+                },
+                "NAS_DELAY": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "NK",
+                        "mean": 25.493485342019543,
+                        "count": 3070
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "HA",
+                        "mean": 1.866507747318236,
+                        "count": 839
+                    },
+                    "relative_difference": 12.66
+                },
+                "LATE_AIRCRAFT_DELAY": {
+                    "highest_group": {
+                        "OP_UNIQUE_CARRIER": "F9",
+                        "mean": 38.94743130227001,
+                        "count": 4185
+                    },
+                    "lowest_group": {
+                        "OP_UNIQUE_CARRIER": "YX",
+                        "mean": 14.88631195998181,
+                        "count": 2199
+                    },
+                    "relative_difference": 1.62
+                }
+            },
+            "ORIGIN": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "ORIGIN": "SMX",
+                        "mean": 175.0,
+                        "count": 9
+                    },
+                    "lowest_group": {
+                        "ORIGIN": "BTM",
+                        "mean": -12.87719298245614,
+                        "count": 57
+                    },
+                    "relative_difference": 14.59
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "ORIGIN": "SMX",
+                        "mean": 168.66666666666666,
+                        "count": 9
+                    },
+                    "lowest_group": {
+                        "ORIGIN": "BTM",
+                        "mean": -24.473684210526315,
+                        "count": 57
+                    },
+                    "relative_difference": 7.89
+                }
+            },
+            "ORIGIN_CITY_NAME": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "ORIGIN_CITY_NAME": "Santa Maria, CA",
+                        "mean": 175.0,
+                        "count": 9
+                    },
+                    "lowest_group": {
+                        "ORIGIN_CITY_NAME": "Butte, MT",
+                        "mean": -12.87719298245614,
+                        "count": 57
+                    },
+                    "relative_difference": 14.59
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "ORIGIN_CITY_NAME": "Santa Maria, CA",
+                        "mean": 168.66666666666666,
+                        "count": 9
+                    },
+                    "lowest_group": {
+                        "ORIGIN_CITY_NAME": "Butte, MT",
+                        "mean": -24.473684210526315,
+                        "count": 57
+                    },
+                    "relative_difference": 7.89
+                }
+            },
+            "ORIGIN_STATE_ABR": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "ORIGIN_STATE_ABR": "VI",
+                        "mean": 17.83177570093458,
+                        "count": 321
+                    },
+                    "lowest_group": {
+                        "ORIGIN_STATE_ABR": "TT",
+                        "mean": -2.3823529411764706,
+                        "count": 102
+                    },
+                    "relative_difference": 8.48
+                },
+                "DEP_DEL15": {
+                    "highest_group": {
+                        "ORIGIN_STATE_ABR": "MD",
+                        "mean": 0.19366875300914782,
+                        "count": 8308
+                    },
+                    "lowest_group": {
+                        "ORIGIN_STATE_ABR": "TT",
+                        "mean": 0.049019607843137254,
+                        "count": 102
+                    },
+                    "relative_difference": 2.95
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "ORIGIN_STATE_ABR": "VI",
+                        "mean": 9.896875,
+                        "count": 320
+                    },
+                    "lowest_group": {
+                        "ORIGIN_STATE_ABR": "TT",
+                        "mean": -10.029411764705882,
+                        "count": 102
+                    },
+                    "relative_difference": 1.99
+                },
+                "ARR_DEL15": {
+                    "highest_group": {
+                        "ORIGIN_STATE_ABR": "WV",
+                        "mean": 0.19943019943019943,
+                        "count": 351
+                    },
+                    "lowest_group": {
+                        "ORIGIN_STATE_ABR": "TT",
+                        "mean": 0.049019607843137254,
+                        "count": 102
+                    },
+                    "relative_difference": 3.07
+                },
+                "CARRIER_DELAY": {
+                    "highest_group": {
+                        "ORIGIN_STATE_ABR": "VI",
+                        "mean": 90.22,
+                        "count": 50
+                    },
+                    "lowest_group": {
+                        "ORIGIN_STATE_ABR": "NV",
+                        "mean": 18.221366698748795,
+                        "count": 3117
+                    },
+                    "relative_difference": 3.95
+                },
+                "NAS_DELAY": {
+                    "highest_group": {
+                        "ORIGIN_STATE_ABR": "NJ",
+                        "mean": 15.694288913773796,
+                        "count": 1786
+                    },
+                    "lowest_group": {
+                        "ORIGIN_STATE_ABR": "HI",
+                        "mean": 3.6382592928377155,
+                        "count": 1103
+                    },
+                    "relative_difference": 3.31
+                }
+            },
+            "DEST": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "DEST": "AGS",
+                        "mean": 59.708454810495624,
+                        "count": 343
+                    },
+                    "lowest_group": {
+                        "DEST": "STC",
+                        "mean": -11.0,
+                        "count": 9
+                    },
+                    "relative_difference": 6.43
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "DEST": "AGS",
+                        "mean": 52.273529411764706,
+                        "count": 340
+                    },
+                    "lowest_group": {
+                        "DEST": "STC",
+                        "mean": -22.666666666666668,
+                        "count": 9
+                    },
+                    "relative_difference": 3.31
+                }
+            },
+            "DEST_CITY_NAME": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "DEST_CITY_NAME": "Augusta, GA",
+                        "mean": 59.708454810495624,
+                        "count": 343
+                    },
+                    "lowest_group": {
+                        "DEST_CITY_NAME": "St. Cloud, MN",
+                        "mean": -11.0,
+                        "count": 9
+                    },
+                    "relative_difference": 6.43
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "DEST_CITY_NAME": "Augusta, GA",
+                        "mean": 52.273529411764706,
+                        "count": 340
+                    },
+                    "lowest_group": {
+                        "DEST_CITY_NAME": "St. Cloud, MN",
+                        "mean": -22.666666666666668,
+                        "count": 9
+                    },
+                    "relative_difference": 3.31
+                }
+            },
+            "DEST_STATE_ABR": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "DEST_STATE_ABR": "KS",
+                        "mean": 8.264076130055512,
+                        "count": 1261
+                    },
+                    "lowest_group": {
+                        "DEST_STATE_ABR": "VT",
+                        "mean": 0.8002219755826859,
+                        "count": 901
+                    },
+                    "relative_difference": 9.33
+                },
+                "DEP_DEL15": {
+                    "highest_group": {
+                        "DEST_STATE_ABR": "PR",
+                        "mean": 0.18619844834626378,
+                        "count": 2449
+                    },
+                    "lowest_group": {
+                        "DEST_STATE_ABR": "VT",
+                        "mean": 0.09100998890122086,
+                        "count": 901
+                    },
+                    "relative_difference": 1.05
+                },
+                "ARR_DELAY": {
+                    "highest_group": {
+                        "DEST_STATE_ABR": "NC",
+                        "mean": 2.842241532186558,
+                        "count": 28195
+                    },
+                    "lowest_group": {
+                        "DEST_STATE_ABR": "MN",
+                        "mean": -6.910917557778545,
+                        "count": 11596
+                    },
+                    "relative_difference": 1.41
+                },
+                "ARR_DEL15": {
+                    "highest_group": {
+                        "DEST_STATE_ABR": "NH",
+                        "mean": 0.1696869851729819,
+                        "count": 607
+                    },
+                    "lowest_group": {
+                        "DEST_STATE_ABR": "MN",
+                        "mean": 0.08744394618834081,
+                        "count": 11596
+                    },
+                    "relative_difference": 0.94
+                },
+                "CARRIER_DELAY": {
+                    "highest_group": {
+                        "DEST_STATE_ABR": "WY",
+                        "mean": 60.90625,
+                        "count": 96
+                    },
+                    "lowest_group": {
+                        "DEST_STATE_ABR": "AK",
+                        "mean": 12.583333333333334,
+                        "count": 408
+                    },
+                    "relative_difference": 3.84
+                },
+                "NAS_DELAY": {
+                    "highest_group": {
+                        "DEST_STATE_ABR": "NJ",
+                        "mean": 28.44783404514948,
+                        "count": 1639
+                    },
+                    "lowest_group": {
+                        "DEST_STATE_ABR": "WY",
+                        "mean": 3.6145833333333335,
+                        "count": 96
+                    },
+                    "relative_difference": 6.87
+                },
+                "LATE_AIRCRAFT_DELAY": {
+                    "highest_group": {
+                        "DEST_STATE_ABR": "TT",
+                        "mean": 45.4,
+                        "count": 10
+                    },
+                    "lowest_group": {
+                        "DEST_STATE_ABR": "VT",
+                        "mean": 10.418032786885245,
+                        "count": 122
+                    },
+                    "relative_difference": 3.36
+                }
+            },
+            "CANCELLATION_CODE": {
+                "DEP_DELAY": {
+                    "highest_group": {
+                        "CANCELLATION_CODE": "C",
+                        "mean": 150.66666666666666,
+                        "count": 6
+                    },
+                    "lowest_group": {
+                        "CANCELLATION_CODE": "B",
+                        "mean": 33.0,
+                        "count": 32
+                    },
+                    "relative_difference": 3.57
+                },
+                "DEP_DEL15": {
+                    "highest_group": {
+                        "CANCELLATION_CODE": "C",
+                        "mean": 0.8333333333333334,
+                        "count": 6
+                    },
+                    "lowest_group": {
+                        "CANCELLATION_CODE": "A",
+                        "mean": 0.3181818181818182,
+                        "count": 44
+                    },
+                    "relative_difference": 1.62
+                }
+            }
+        },
+        "missing_correlation": {
+            "DEP_DELAY": {
+                "DEP_DELAY": NaN,
+                "DEP_DEL15": NaN,
+                "ARR_DELAY": 0.9418165982577764,
+                "ARR_DEL15": 0.9418165982577764,
+                "CANCELLATION_CODE": -0.9933872160549856
+            },
+            "DEP_DEL15": {
+                "DEP_DELAY": NaN,
+                "DEP_DEL15": NaN,
+                "ARR_DELAY": 0.9418165982577764,
+                "ARR_DEL15": 0.9418165982577764,
+                "CANCELLATION_CODE": -0.9933872160549856
+            },
+            "ARR_DELAY": {
+                "DEP_DELAY": 0.9418165982577764,
+                "DEP_DEL15": 0.9418165982577764,
+                "ARR_DELAY": NaN,
+                "ARR_DEL15": NaN,
+                "CANCELLATION_CODE": -0.9480860867105209
+            },
+            "ARR_DEL15": {
+                "DEP_DELAY": 0.9418165982577764,
+                "DEP_DEL15": 0.9418165982577764,
+                "ARR_DELAY": NaN,
+                "ARR_DEL15": NaN,
+                "CANCELLATION_CODE": -0.9480860867105209
+            },
+            "CANCELLATION_CODE": {
+                "DEP_DELAY": -0.9933872160549856,
+                "DEP_DEL15": -0.9933872160549856,
+                "ARR_DELAY": -0.9480860867105209,
+                "ARR_DEL15": -0.9480860867105209,
+                "CANCELLATION_CODE": NaN
+            }
+        },
+        "additional_relationships": {
+            "DEP_DELAY": "Highly skewed distribution; consider transformations.",
+            "DEP_DEL15": "Highly skewed distribution; consider transformations.",
+            "ARR_DELAY": "Highly skewed distribution; consider transformations.",
+            "ARR_DEL15": "Highly skewed distribution; consider transformations.",
+            "CANCELLED": "Highly skewed distribution; consider transformations.",
+            "CARRIER_DELAY": "Highly skewed distribution; consider transformations.",
+            "WEATHER_DELAY": "Highly skewed distribution; consider transformations.",
+            "NAS_DELAY": "Highly skewed distribution; consider transformations.",
+            "SECURITY_DELAY": "Highly skewed distribution; consider transformations.",
+            "LATE_AIRCRAFT_DELAY": "Highly skewed distribution; consider transformations."
+        }
+    },
+    "key_insights": {
+        "DEP_DELAY": [
+            "High variability (std/mean > 1)",
+            "High outlier rate (>10%)"
+        ],
+        "DEP_DEL15": [
+            "High variability (std/mean > 1)",
+            "High outlier rate (>10%)"
+        ],
+        "ARR_DELAY": [
+            "High variability (std/mean > 1)"
+        ],
+        "ARR_DEL15": [
+            "High variability (std/mean > 1)",
+            "High outlier rate (>10%)"
+        ],
+        "CANCELLED": [
+            "High variability (std/mean > 1)"
+        ],
+        "CANCELLATION_CODE": [
+            "High missing values (>50%)",
+            "Low cardinality - potential categorical grouping"
+        ],
+        "CARRIER_DELAY": [
+            "High missing values (>50%)",
+            "High variability (std/mean > 1)",
+            "High outlier rate (>10%)"
+        ],
+        "WEATHER_DELAY": [
+            "High missing values (>50%)",
+            "High variability (std/mean > 1)"
+        ],
+        "NAS_DELAY": [
+            "High missing values (>50%)",
+            "High variability (std/mean > 1)"
+        ],
+        "SECURITY_DELAY": [
+            "High missing values (>50%)",
+            "High variability (std/mean > 1)"
+        ],
+        "LATE_AIRCRAFT_DELAY": [
+            "High missing values (>50%)",
+            "High variability (std/mean > 1)"
+        ]
+    }
+}

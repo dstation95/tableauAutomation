@@ -1,0 +1,74 @@
+[
+    {
+        "dx": 213,
+        "dy": 1,
+        "index": 1,
+        "name": "Sum"
+    },
+    {
+        "dx": 213,
+        "dy": 27,
+        "index": 2,
+        "name": "Average"
+    },
+    {
+        "dx": 215,
+        "dy": 58,
+        "index": 3,
+        "name": "Median"
+    },
+    {
+        "dx": 215,
+        "dy": 75,
+        "index": 4,
+        "name": "Count"
+    },
+    {
+        "dx": 211,
+        "dy": 98,
+        "index": 5,
+        "name": "Count (Distinct)"
+    },
+    {
+        "dx": 218,
+        "dy": 129,
+        "index": 6,
+        "name": "Minimum"
+    },
+    {
+        "dx": 223,
+        "dy": 150,
+        "index": 7,
+        "name": "Maximum"
+    },
+    {
+        "dx": 228,
+        "dy": 176,
+        "index": 8,
+        "name": "Percentile"
+    },
+    {
+        "dx": 229,
+        "dy": 201,
+        "index": 9,
+        "name": "Std. Dev"
+    },
+    {
+        "dx": 233,
+        "dy": 227,
+        "index": 10,
+        "name": "Std. Dev (Pop)"
+    },
+    {
+        "dx": 236,
+        "dy": 253,
+        "index": 11,
+        "name": "Vairance"
+    },
+    {
+        "dx": 247,
+        "dy": 270,
+        "index": 12,
+        "name": "Vairance (Pop)"
+    }
+]

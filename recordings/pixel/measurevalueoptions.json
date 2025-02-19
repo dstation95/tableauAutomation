@@ -1,0 +1,68 @@
+[
+    {
+        "dx": 56,
+        "dy": 16,
+        "index": 1,
+        "name": "Filter..."
+    },
+    {
+        "dx": 59,
+        "dy": 46,
+        "index": 2,
+        "name": "Show Filter"
+    },
+    {
+        "dx": 57,
+        "dy": 71,
+        "index": 3,
+        "name": "Apply to Worksheets >"
+    },
+    {
+        "dx": 57,
+        "dy": 104,
+        "index": 4,
+        "name": "Format..."
+    },
+    {
+        "dx": 55,
+        "dy": 128,
+        "index": 5,
+        "name": "Include in Tooltip"
+    },
+    {
+        "dx": 49,
+        "dy": 160,
+        "index": 6,
+        "name": "Attribute"
+    },
+    {
+        "dx": 49,
+        "dy": 186,
+        "index": 7,
+        "name": "Measure (Median) >"
+    },
+    {
+        "dx": 49,
+        "dy": 216,
+        "index": 8,
+        "name": "Edit in Shelf"
+    },
+    {
+        "dx": 49,
+        "dy": 249,
+        "index": 9,
+        "name": "Add Table Calculation..."
+    },
+    {
+        "dx": 49,
+        "dy": 275,
+        "index": 10,
+        "name": "Quick Table Calculation >"
+    },
+    {
+        "dx": 50,
+        "dy": 309,
+        "index": 11,
+        "name": "Remove"
+    }
+]

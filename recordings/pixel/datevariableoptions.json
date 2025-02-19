@@ -1,0 +1,176 @@
+[
+    {
+        "dx": 50,
+        "dy": 13,
+        "index": 1,
+        "name": "Filter..."
+    },
+    {
+        "dx": 52,
+        "dy": 51,
+        "index": 2,
+        "name": "Show Filter"
+    },
+    {
+        "dx": 53,
+        "dy": 79,
+        "index": 3,
+        "name": "Show Highlighter"
+    },
+    {
+        "dx": 55,
+        "dy": 97,
+        "index": 4,
+        "name": "Apply to Worksheets >"
+    },
+    {
+        "dx": 55,
+        "dy": 135,
+        "index": 5,
+        "name": "Sort..."
+    },
+    {
+        "dx": 55,
+        "dy": 155,
+        "index": 6,
+        "name": "Format..."
+    },
+    {
+        "dx": 53,
+        "dy": 176,
+        "index": 7,
+        "name": "Show Header"
+    },
+    {
+        "dx": 55,
+        "dy": 202,
+        "index": 8,
+        "name": "Include in Tooltip"
+    },
+    {
+        "dx": 58,
+        "dy": 234,
+        "index": 9,
+        "name": "Show Missing Values"
+    },
+    {
+        "dx": 64,
+        "dy": 268,
+        "index": 10,
+        "name": "Standard Gregorian"
+    },
+    {
+        "dx": 56,
+        "dy": 296,
+        "index": 11,
+        "name": "ISO-8601 Week-Based"
+    },
+    {
+        "dx": 53,
+        "dy": 324,
+        "index": 12,
+        "name": "Year 2015"
+    },
+    {
+        "dx": 55,
+        "dy": 349,
+        "index": 13,
+        "name": "Quarter Q2"
+    },
+    {
+        "dx": 54,
+        "dy": 371,
+        "index": 14,
+        "name": "Month May"
+    },
+    {
+        "dx": 55,
+        "dy": 400,
+        "index": 15,
+        "name": "Day 8"
+    },
+    {
+        "dx": 58,
+        "dy": 420,
+        "index": 16,
+        "name": "More >"
+    },
+    {
+        "dx": 60,
+        "dy": 455,
+        "index": 17,
+        "name": "Year 2015"
+    },
+    {
+        "dx": 61,
+        "dy": 479,
+        "index": 18,
+        "name": "Quarter Q2 2015"
+    },
+    {
+        "dx": 62,
+        "dy": 503,
+        "index": 19,
+        "name": "Month May 2015"
+    },
+    {
+        "dx": 62,
+        "dy": 531,
+        "index": 20,
+        "name": "Week Number Week 5, 2015"
+    },
+    {
+        "dx": 56,
+        "dy": 548,
+        "index": 21,
+        "name": "Day May 8, 2015"
+    },
+    {
+        "dx": 55,
+        "dy": 572,
+        "index": 22,
+        "name": "More >"
+    },
+    {
+        "dx": 55,
+        "dy": 604,
+        "index": 23,
+        "name": "Exact Date"
+    },
+    {
+        "dx": 55,
+        "dy": 639,
+        "index": 24,
+        "name": "Attribute"
+    },
+    {
+        "dx": 56,
+        "dy": 661,
+        "index": 25,
+        "name": "Measure >"
+    },
+    {
+        "dx": 56,
+        "dy": 698,
+        "index": 26,
+        "name": "Discrete"
+    },
+    {
+        "dx": 58,
+        "dy": 722,
+        "index": 27,
+        "name": "Continuous"
+    },
+    {
+        "dx": 59,
+        "dy": 754,
+        "index": 28,
+        "name": "Edit in Shelf"
+    },
+    {
+        "dx": 59,
+        "dy": 782,
+        "index": 29,
+        "name": "Remove"
+    }
+]
