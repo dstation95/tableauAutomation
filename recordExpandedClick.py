@@ -11,25 +11,18 @@ import pyautogui
 # ------------------------------------------------------------
 # Production Setup: Create Base Folder Structure
 # ------------------------------------------------------------
-# Define the base recordings folder and the subfolder for clicks.
 base_recordings_dir = os.path.join(os.getcwd(), "recordings")
 clicks_dir = os.path.join(base_recordings_dir, "clicks")
-# Create the folders if they don't exist.
 os.makedirs(clicks_dir, exist_ok=True)
 
 # ------------------------------------------------------------
 # Step 1: Get the system prompt and derive file names
 # ------------------------------------------------------------
-# Prompt the user for a system prompt (e.g., "swap x and y")
 prompt_text = input("Enter the system prompt for this recording (e.g., 'swap x and y'): ")
-# Normalize the prompt to create a safe file prefix (lowercase, underscores instead of spaces)
 file_prefix = prompt_text.lower().replace(" ", "_")
+input_filename = os.path.join(clicks_dir, f"{file_prefix}_input.json")
+output_filename = os.path.join(clicks_dir, f"{file_prefix}_output.json")
 
-# Define file names for the training examples (saved as JSON arrays)
-input_filename = os.path.join(clicks_dir, f"{file_prefix}_input.json")    # e.g., recordings/clicks/swap_x_and_y_input.json
-output_filename = os.path.join(clicks_dir, f"{file_prefix}_output.json")  # e.g., recordings/clicks/swap_x_and_y_output.json
-
-# Helper function to append an example to a JSON file (as an array)
 def append_to_json_file(filename, data):
     if os.path.exists(filename):
         with open(filename, "r", encoding="utf-8") as f:
@@ -45,27 +38,33 @@ def append_to_json_file(filename, data):
     print(f"Appended training example to {filename}")
 
 # ------------------------------------------------------------
-# Step 2: Connect to the Application Window (e.g., Tableau)
+# Step 2: Connect to the Major "Tableau" Window
 # ------------------------------------------------------------
-# Adjust the title regex to match your target application (e.g., Tableau)
-windows = Desktop(backend="uia").windows(title_re=".*Tableau - B.*", visible_only=True)
-if not windows:
-    print("No Tableau window found.")
+time.sleep(2)
+all_windows = Desktop(backend="uia").windows(visible_only=False)
+# Select only those windows whose title is exactly "Tableau"
+major_tableau_windows = [win for win in all_windows if win.window_text().strip() == "Tableau"]
+
+if not major_tableau_windows:
+    print("No major Tableau window found.")
     sys.exit(1)
 
 def window_area(win):
     rect = win.rectangle()
     return (rect.right - rect.left) * (rect.bottom - rect.top)
 
-# Choose the largest visible window
-target_window = max(windows, key=window_area)
-print(f"Connected to window: Handle {target_window.handle}, Title: {target_window.window_text()}")
+# Pick the largest "Tableau" window as the target.
+target_window = max(major_tableau_windows, key=window_area)
+print(f"Connected to major Tableau window: Handle {target_window.handle}, Title: {target_window.window_text()}")
 
 app = Application(backend="uia").connect(handle=target_window.handle)
 main_window = app.window(handle=target_window.handle)
 
+# Use only these major Tableau windows for further processing.
+all_tableau_windows = major_tableau_windows
+
 # ------------------------------------------------------------
-# Step 3: Capture Initial Screenshot and UI Snapshot
+# Step 3: Capture the Entire Tableau UI Snapshot (All Elements)
 # ------------------------------------------------------------
 def rectangle_to_str(rect):
     return f"{int(rect.left)}-{int(rect.top)}-{int(rect.right)}-{int(rect.bottom)}"
@@ -82,7 +81,9 @@ def generate_composite_id(elem_info):
     name = elem_info.name if elem_info.name else "NoName"
     rect_str = rectangle_to_str(elem_info.rectangle)
     rt_str = runtime_id_to_str(elem_info.runtime_id)
-    return f"{control_type}|{class_name}|{auto_id}|{name}|{rect_str}|{rt_str}"
+    # Check for the toggle pattern availability.
+    is_toggle = getattr(elem_info, "istogglepattern", False)
+    return f"{control_type}|{class_name}|{auto_id}|{name}|{rect_str}|{rt_str}|istoggle:{is_toggle}"
 
 def dump_ui_tree(elem_info):
     tree = {}
@@ -99,32 +100,41 @@ def dump_ui_tree(elem_info):
         tree["children"].append(subtree)
     return tree
 
-# (Screenshot saving is disabled for production)
-# Capture a screenshot of the main window
-# initial_img = main_window.capture_as_image()
-# initial_img_filename = os.path.join(clicks_dir, f"{file_prefix}_initial.png")
-# initial_img.save(initial_img_filename)
-# print(f"Initial screenshot saved as {initial_img_filename}")
+# Build a composite snapshot for every valid Tableau window.
+all_ui_snapshot = []
+for win in all_tableau_windows:
+    ui_tree = dump_ui_tree(win.element_info)
+    all_ui_snapshot.append({
+        "handle": win.handle,
+        "title": win.window_text(),
+        "ui_tree": ui_tree
+    })
 
-# Dump the UI tree snapshot
-ui_tree = dump_ui_tree(main_window.element_info)
-# tree_timestamp = int(time.time())
-# tree_filename = os.path.join(clicks_dir, f"{file_prefix}_ui_tree_{tree_timestamp}.json")
-# with open(tree_filename, "w") as f:
-#     json.dump(ui_tree, f, indent=2)
-# print(f"UI tree snapshot saved as {tree_filename}")
+# Recursively collect all toggle-enabled elements from a dumped tree.
+def collect_toggle_elements(tree):
+    toggles = []
+    if "istoggle:True" in tree.get("composite", ""):
+        toggles.append(tree["composite"])
+    for child in tree.get("children", []):
+        toggles.extend(collect_toggle_elements(child))
+    return toggles
 
-# Build the training input JSON object
+toggle_elements = []
+for win_snapshot in all_ui_snapshot:
+    toggle_elements.extend(collect_toggle_elements(win_snapshot["ui_tree"]))
+
 training_input = {
-    "ui_snapshot": ui_tree,
+    "all_ui_snapshot": all_ui_snapshot,
+    "toggle_elements": toggle_elements,
     "prompt": prompt_text
 }
 
-# Append the training input to the input file (JSON array)
 append_to_json_file(input_filename, training_input)
+print("Full Tableau UI snapshot captured for recording (all elements, regardless of visibility).")
+print(f"Collected {len(toggle_elements)} toggle-enabled elements.")
 
 # ------------------------------------------------------------
-# Step 4: Wait for the Backtick Key Press
+# Step 4: Wait for the Backtick Key Press to Start Recording the Click
 # ------------------------------------------------------------
 print("Waiting for you to press the backtick key (`) to start recording the click...")
 
@@ -132,10 +142,8 @@ def on_key_press(key):
     try:
         if key.char == '`':
             print("Backtick key pressed. Now waiting for your next mouse click...")
-            # Stop the keyboard listener.
             return False
     except AttributeError:
-        # Some keys (like special function keys) don't have a char attribute.
         pass
 
 with keyboard.Listener(on_press=on_key_press) as k_listener:
@@ -146,17 +154,23 @@ with keyboard.Listener(on_press=on_key_press) as k_listener:
 # ------------------------------------------------------------
 recorded_runtime_id = None
 
+def point_in_any_window(x, y, windows_list):
+    for win in windows_list:
+        r = win.rectangle()
+        if r.left <= x <= r.right and r.top <= y <= r.bottom:
+            return True
+    return False
+
 def on_click(x, y, button, pressed):
     global recorded_runtime_id
     if pressed:
         click_data = {"x": x, "y": y, "button": str(button)}
         print(f"Mouse click detected at: {click_data}")
-        # Ensure the click is inside the main window
-        rect = main_window.rectangle()
-        if not (rect.left <= x <= rect.right and rect.top <= y <= rect.bottom):
-            print("Click outside the target window; ignoring.")
-            return False  # Stop the listener even if click is outside
-        # Wait a short moment before recording (if needed)
+        # Verify that the click is inside one of the valid Tableau windows.
+        if not point_in_any_window(x, y, all_tableau_windows):
+            print("Click outside any valid Tableau window; ignoring.")
+            return False
+        # Allow time for any popup to appear after the click.
         time.sleep(0.5)
         try:
             clicked_elem_info = UIAElementInfo.from_point(x, y)
@@ -165,15 +179,18 @@ def on_click(x, y, button, pressed):
             return False
         composite = generate_composite_id(clicked_elem_info)
         print("Recorded composite ID:", composite)
-        # Extract runtime ID (the last field after splitting by '|')
-        recorded_runtime_id = composite.split("|")[-1]
+        # Extract the runtime ID (assume it's the field before the istoggle flag).
+        parts = composite.split("|")
+        if len(parts) >= 7:
+            recorded_runtime_id = parts[5]  # parts[5] holds the runtime ID.
+        else:
+            recorded_runtime_id = parts[-1]
         print("Extracted runtime ID:", recorded_runtime_id)
-        return False  # Stop the mouse listener
+        return False
 
 with mouse.Listener(on_click=on_click) as m_listener:
     m_listener.join()
 
-# Wait an extra second before finishing.
 time.sleep(1)
 if recorded_runtime_id is None:
     print("No runtime ID recorded.")
@@ -183,6 +200,5 @@ training_output = {
     "runtime_id": recorded_runtime_id
 }
 
-# Append the training output to the output file (JSON array)
 append_to_json_file(output_filename, training_output)
 print(f"Appended training output to {output_filename}")

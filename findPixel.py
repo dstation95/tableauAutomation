@@ -186,6 +186,7 @@ Current UI snapshot:
         # Topmost edge with horizontal center.
         target_x = (rect.left + rect.right) // 2
         target_y = rect.top
+        print("workin ")
     else:
         # Center of the element.
         target_x = (rect.left + rect.right) // 2

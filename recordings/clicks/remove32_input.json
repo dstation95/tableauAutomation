@@ -1,0 +1,209 @@
+[
+  {
+    "all_ui_snapshot": [
+      {
+        "handle": 6489354,
+        "title": "Tableau",
+        "ui_tree": {
+          "composite": "Window|TableauMenu|NoAutomationId|Tableau|698-113-964-916|42_6489354|istoggle:False",
+          "children": [
+            {
+              "composite": "[1] MenuItem|QAction|NoAutomationId|Filter...|701-116-960-140|42_6489354_4_-2147419067|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[2] Separator|QAction|NoAutomationId|NoName|701-140-960-149|42_6489354_4_-2147419065|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[3] MenuItem|QAction|NoAutomationId|Show Filter|701-149-960-173|42_6489354_4_-2147419062|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[4] MenuItem|QAction|NoAutomationId|Show Highlighter|701-173-960-197|42_6489354_4_-2147419061|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[5] MenuItem|QAction|NoAutomationId|Apply to Worksheets|701-197-960-221|42_6489354_4_-2147419056|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[6] Separator|QAction|NoAutomationId|NoName|701-221-960-230|42_6489354_4_-2147419055|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[7] MenuItem|QAction|NoAutomationId|Sort...|701-230-960-256|42_6489354_4_-2147419054|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[8] MenuItem|QAction|NoAutomationId|Format...|701-256-960-280|42_6489354_4_-2147419051|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[9] MenuItem|QAction|NoAutomationId|Show Header|701-280-960-304|42_6489354_4_-2147419050|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[10] MenuItem|QAction|NoAutomationId|Include in Tooltip|701-304-960-328|42_6489354_4_-2147419049|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[11] Separator|QAction|NoAutomationId|NoName|701-328-960-337|42_6489354_4_-2147419048|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[12] MenuItem|QAction|NoAutomationId|Show Missing Values|701-337-960-361|42_6489354_4_-2147419045|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[13] Separator|QAction|NoAutomationId|NoName|701-361-960-370|42_6489354_4_-2147419043|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[14] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147419040|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[15] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147419038|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[16] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147419032|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[17] MenuItem|QWidgetAction|NoAutomationId|Standard Gregorian|701-370-960-394|42_6489354_4_-2147419031|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[18] MenuItem|QWidgetAction|NoAutomationId|ISO-8601 Week-Based|701-394-960-418|42_6489354_4_-2147419030|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[19] Separator|QAction|NoAutomationId|NoName|701-418-960-427|42_6489354_4_-2147419029|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[20] MenuItem|QWidgetAction|NoAutomationId|Year|701-427-960-451|42_6489354_4_-2147419028|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[21] MenuItem|QWidgetAction|NoAutomationId|Quarter|701-451-960-475|42_6489354_4_-2147419027|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[22] MenuItem|QWidgetAction|NoAutomationId|Month|701-475-960-499|42_6489354_4_-2147419026|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[23] MenuItem|QWidgetAction|NoAutomationId|Day|701-499-960-523|42_6489354_4_-2147419025|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[24] MenuItem|QAction|NoAutomationId|More|701-523-960-547|42_6489354_4_-2147419024|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[25] Separator|QAction|NoAutomationId|NoName|701-547-960-556|42_6489354_4_-2147419023|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[26] MenuItem|QWidgetAction|NoAutomationId|Year|701-556-960-580|42_6489354_4_-2147419022|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[27] MenuItem|QWidgetAction|NoAutomationId|Quarter|701-580-960-604|42_6489354_4_-2147419021|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[28] MenuItem|QWidgetAction|NoAutomationId|Month|701-604-960-628|42_6489354_4_-2147419020|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[29] MenuItem|QWidgetAction|NoAutomationId|Week Number|701-628-960-652|42_6489354_4_-2147419019|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[30] MenuItem|QWidgetAction|NoAutomationId|Day|701-652-960-676|42_6489354_4_-2147419018|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[31] MenuItem|QAction|NoAutomationId|More|701-676-960-700|42_6489354_4_-2147419017|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[32] Separator|QAction|NoAutomationId|NoName|701-700-960-709|42_6489354_4_-2147419016|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[33] MenuItem|QWidgetAction|NoAutomationId|Exact Date|701-709-960-733|42_6489354_4_-2147419015|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[34] Separator|QAction|NoAutomationId|NoName|701-733-960-742|42_6489354_4_-2147419014|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[35] MenuItem|QWidgetAction|NoAutomationId|Attribute|701-742-960-766|42_6489354_4_-2147419013|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[36] MenuItem|QAction|NoAutomationId|Measure|701-766-960-790|42_6489354_4_-2147419012|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[37] Separator|QAction|NoAutomationId|NoName|701-790-960-799|42_6489354_4_-2147419011|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[38] MenuItem|QAction|NoAutomationId|Discrete|701-799-960-823|42_6489354_4_-2147419010|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[39] MenuItem|QAction|NoAutomationId|Continuous|701-823-960-847|42_6489354_4_-2147419009|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[40] Separator|QAction|NoAutomationId|NoName|701-847-960-856|42_6489354_4_-2147419008|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[41] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147419006|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[42] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147419005|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[43] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147419002|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[44] MenuItem|QAction|NoAutomationId|Edit in Shelf|701-856-960-880|42_6489354_4_-2147419001|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[45] Separator|QAction|NoAutomationId|NoName|701-880-960-889|42_6489354_4_-2147419000|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[46] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147418990|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[47] Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_6489354_4_-2147418986|istoggle:False",
+              "children": []
+            },
+            {
+              "composite": "[48] MenuItem|QAction|NoAutomationId|Remove|701-889-960-913|42_6489354_4_-2147419066|istoggle:False",
+              "children": []
+            }
+          ]
+        }
+      }
+    ],
+    "toggle_elements": [],
+    "prompt": "remove32"
+  }
+]

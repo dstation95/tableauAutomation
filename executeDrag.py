@@ -133,7 +133,7 @@ Below are examples of UI snapshots with their corresponding runtime IDs for a dr
 Now, given the current UI snapshot, return ONLY a JSON object with two keys:
   "hold_runtime_id": <runtime ID of the UI element to drag from>,
   "drop_runtime_id": <runtime ID of the UI element to drop onto>.
-You should select the hold element whose composite ID or name includes the tag "{NAME}" and should be a tree ekement located similair to the example above.
+You should select the hold element whose composite ID or name EXACTLY MATCHES THIS "{NAME}", dont pick sometign similair pick somethign that is exactly this name, and should be a tree ekement located similair to the example above.
 For the drop element, choose the one whose composite ID or name includes the tag "{Location}".
 Return only the JSON with those two keys. No extra formatting.
 Current UI snapshot:
@@ -210,12 +210,20 @@ Current UI snapshot:
     drop_rect = drop_elem.rectangle()
     hold_x = (hold_rect.left + hold_rect.right) // 2
     hold_y = (hold_rect.top + hold_rect.bottom) // 2
-    if Location in ["m_xAxisShelf", "m_yAxisShelf"]:
+
+    # Adjust drop coordinates based on the target Location.
+    if Location == "m_filterShelf":
+        # For dragtoFilter, position the drop 10 pixels above the bottom of the target element,
+        # and centered horizontally.
+        drop_x = (drop_rect.left + drop_rect.right) // 2
+        drop_y = drop_rect.bottom - 10
+    elif Location in ["m_xAxisShelf", "m_yAxisShelf"]:
         drop_x = drop_rect.left + 30
         drop_y = (drop_rect.top + drop_rect.bottom) // 2
     else:
         drop_x = (drop_rect.left + drop_rect.right) // 2
         drop_y = (drop_rect.top + drop_rect.bottom) // 2
+
     print(f"Dragging from ({hold_x}, {hold_y}) to ({drop_x}, {drop_y})")
     
     pyautogui.moveTo(hold_x, hold_y, duration=0.3)
@@ -223,6 +231,13 @@ Current UI snapshot:
     pyautogui.moveTo(drop_x, drop_y, duration=0.5)
     pyautogui.mouseUp()
     pyautogui.moveTo(hold_x, hold_y, duration=0.3)
+
+    
+    # pyautogui.moveTo(hold_x, hold_y, duration=0.3)
+    # pyautogui.mouseDown()
+    # pyautogui.moveTo(drop_x, drop_y, duration=0.5)
+    # pyautogui.mouseUp()
+    # pyautogui.moveTo(hold_x, hold_y, duration=0.3)
     # pyautogui.scroll(-600)
     if finalAttemps > 0:
         print(f"Reverting scroll: scrolling up {finalAttemps} time(s).")

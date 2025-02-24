@@ -18,6 +18,71 @@ import time
 
 
 
+def DragToX(variable_name):
+    """
+    Drags the given variable to the X axis.
+    """
+    executeDrag("dragToX", variable_name, "m_xAxisShelf")
+
+
+def DragToY(variable_name):
+    """
+    Drags the given variable to the Y axis.
+    """
+    executeDrag("dragToY", variable_name, "m_yAxisShelf")
+
+
+def DragToColor(variable_name, axis_name, index):
+    """
+    Drags the given variable to the Color shelf.
+    - axis_name: the axis (or mark area) to click/activate before dragging.
+    - index: if 0, it uses the "All" mark tab; if > 0, it selects the corresponding measure.
+    """
+    # Activate the specified axis (or mark area)
+    executeClick(axis_name)
+    if index > 0:
+        # This simulates selecting a specific measure (using the pixel lookup)
+        executePixelClick(axis_name, "axis", index, isAxis=True)
+    # Now drag the variable to the Color button
+    executeDrag("dragToColor", variable_name, "TableuButton:Color")
+
+
+def DragToSize(variable_name, axis_name, index):
+    """
+    Drags the given variable to the Size shelf.
+    - axis_name: the axis (or mark area) to click/activate before dragging.
+    - index: used to select the appropriate measure tab if needed.
+    """
+    executeClick(axis_name)
+    if index > 0:
+        executePixelClick(axis_name, "axis", index, isAxis=True)
+    executeDrag("dragToSize", variable_name, "TableuButton:size")
+
+
+def DragToLabel(variable_name, axis_name, index):
+    """
+    Drags the given variable to the Label shelf.
+    - axis_name: the axis (or mark area) to click/activate before dragging.
+    - index: used to select the appropriate measure tab if needed.
+    """
+    executeClick(axis_name)
+    if index > 0:
+        executePixelClick(axis_name, "axis", index, isAxis=True)
+    executeDrag("dragToLabel", variable_name, "TableuButton:Label")
+
+
+def DragToDetail(variable_name, axis_name, index):
+    """
+    Drags the given variable to the Detail shelf.
+    - axis_name: the axis (or mark area) to click/activate before dragging.
+    - index: used to select the appropriate measure tab if needed.
+    """
+    executeClick(axis_name)
+    if index > 0:
+        executePixelClick(axis_name, "axis", index, isAxis=True)
+    executeDrag("dragToDetails", variable_name, "TableuButton:details")
+
+    
 
 def main():
     print("Main controller for execute functions.")
@@ -82,18 +147,20 @@ def main():
     # executeDrag("dragToDetails", "Dest City Name", "detail")
     # executeDrag("dragToSize", "Total Delay", "size")
 
+    executeClick("xAxis")
 
-    # value = executePixelClick("yAxis", "axis", 2, True)
-    # time.sleep(0.2)
-    # print(value[1])
-    # hold1 = executeRelativeClick("axismeasureelement", 9, value[0], value[1])
-    # executeRelativeClick("measuresuboption", 3, hold1[0], hold1[1])
+    value = executePixelClick("xAxis", "axis", 2, True)
+    time.sleep(0.2)
+    print(value[1])
+    hold1 = executeRelativeClick("axismeasureelement", 9, value[0], value[1])
+    executeRelativeClick("measuresuboption", 3, hold1[0], hold1[1])
     # executeDrag("dragtoFilter", "Origin State Abr", "m_filterShelf")
     # executeClick("clickNone", "should click the button with the None label")
     # executeListClick("enterFilterSearch", "clickSearchFilterResult", ["CO","NM", "HI"])
     # executeClick("closeFilter")
     # value = executePixelClick("clickMeasures", "measureValue", 2, False, True)
     # hold2 = executeRelativeClick("measureValueOptions", 7, value[0], value[1])
+    # executeClick("remove")
     # executeRelativeClick("measuresuboption", 3, hold2[0], hold2[1])
 
     # executeRelativeClick("test", 1, value[0], value[1])
@@ -136,7 +203,7 @@ def main():
     # value = findPixel("xAxis", "axis", 2, True)
     # executeRelativeClick("zero", 1, value[0], value[1] )
 
-    value = findPixel("xAxis", "axis", 1, True)
+    # value = findPixel("xAxis", "axis", 1, True)
     # pyautogui.click(value[0],  value[1])
     # time.sleep(0.5)
     # pyautogui.click(value[0],  value[1])
@@ -159,6 +226,9 @@ def main():
     # else:
     #     value = executeRelativeClick("oppositemarkvariableoptions", 8, value[0], value[1])
 
+
+
+    # executeClick("remove")
     # value = executeRelativeClick("markvariableoptions", 8, value[0], value[1] )
     # pixel_color = pyautogui.pixel(value[0], value[1])
     # executeRelativeClick("measureSubOption", 3, value[0], value[1] )

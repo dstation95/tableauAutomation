@@ -166,9 +166,10 @@ def executeCalculatedField(task_name, field_name, field_formula):
     # Build the Full Prompt for Inference
     # ------------------------------------------------------------
     full_prompt = f"""
-Below are examples of UI snapshots with their corresponding runtime IDs for the button click task.
+Below are examples of UI snapshots with their corresponding runtime IDs for the button click task. an
 {example_text}
 Now, given the current UI snapshot and based on what was clicked in the example, return ONLY the runtime_id of the UI element that should be clicked.
+YOU SHOULD click the one with an automation ID of m_menuBtn
 Current UI snapshot:
 {new_snapshot_str}
 """

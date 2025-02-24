@@ -48,60 +48,52 @@
                   "composite": "[1] Group|QWidget|NoAutomationId|NoName|262-105-1920-957|42_12389534_4_-2147483247",
                   "children": [
                     {
-                      "composite": "[1] Group|WorksheetWidget|Sheet 15_WorksheetWidget|NoName|262-105-1920-957|42_12389534_4_-2147410490",
+                      "composite": "[1] Group|WorksheetWidget|Sheet 14_WorksheetWidget|NoName|262-105-1920-957|42_12389534_4_-2147438691",
                       "children": [
                         {
-                          "composite": "[1] Group|CardManager|NoAutomationId|NoName|262-105-1920-957|42_12389534_4_-2147410491",
+                          "composite": "[1] Group|CardManager|NoAutomationId|NoName|262-105-1920-957|42_12389534_4_-2147438692",
                           "children": [
                             {
-                              "composite": "[1] Group|VisualCanvas|m_visualCanvas|NoName|468-181-1714-951|42_12389534_4_-2147410450",
+                              "composite": "[1] Group|VisualCanvas|m_visualCanvas|NoName|468-181-1914-951|42_12389534_4_-2147438651",
                               "children": [
                                 {
-                                  "composite": "[1] Group|VisualEdgeManager|m_visualCanvas.m_canvasEdgeManager|NoName|468-181-1714-951|42_12389534_4_-2147410451",
+                                  "composite": "[1] Group|VisualEdgeManager|m_visualCanvas.m_canvasEdgeManager|NoName|468-181-1914-951|42_12389534_4_-2147438652",
                                   "children": [
                                     {
-                                      "composite": "[1] Group|VisualWidgetProxy|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy|NoName|475-233-1707-944|42_12389534_4_-2147410453",
+                                      "composite": "[1] Group|VisualWidgetProxy|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy|NoName|475-233-1907-944|42_12389534_4_-2147438654",
                                       "children": [
                                         {
-                                          "composite": "[1] Group|QWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget|NoName|475-233-1707-944|42_12389534_4_-2147410454",
+                                          "composite": "[1] Group|QWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget|NoName|475-233-1907-944|42_12389534_4_-2147438655",
                                           "children": [
                                             {
-                                              "composite": "[1] Group|SceneMarginWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneMarginWidget_m_topAxes|NoName|559-237-1682-257|42_12389534_4_-2147410448",
+                                              "composite": "[1] Group|SceneMarginWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneMarginWidget_m_bottomAxes|NoName|639-357-1904-420|42_12389534_4_-2147438634",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[2] Group|SceneMarginWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneMarginWidget_m_bottomAxes|NoName|559-877-1682-940|42_12389534_4_-2147410434",
+                                              "composite": "[2] Group|SceneMarginWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneMarginWidget_m_leftAxes|NoName|479-237-639-358|42_12389534_4_-2147438650",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[3] Group|SceneMarginWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneMarginWidget_m_leftAxes|NoName|479-257-559-878|42_12389534_4_-2147410449",
-                                              "children": []
-                                            },
-                                            {
-                                              "composite": "[4] Group|SceneWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneWidget_Sheet15|NoName|559-257-1682-878|42_12389534_4_-2147410445",
+                                              "composite": "[3] Group|SceneWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneWidget_Sheet14|NoName|639-237-1904-358|42_12389534_4_-2147438646",
                                               "children": [
                                                 {
-                                                  "composite": "[1] Text|QLabel|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneWidget_Sheet15.RadialDistanceReadout|NoName|559-257-568-278|42_12389534_4_-2147410447",
+                                                  "composite": "[1] Text|QLabel|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneWidget_Sheet14.RadialDistanceReadout|NoName|639-237-648-258|42_12389534_4_-2147438648",
                                                   "children": []
                                                 }
                                               ]
-                                            },
-                                            {
-                                              "composite": "[5] ScrollBar|QScrollBar|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.VisualWidget_m_yScrollBar|NoName|1685-257-1706-877|42_12389534_4_-2147410435",
-                                              "children": []
                                             }
                                           ]
                                         }
                                       ]
                                     },
                                     {
-                                      "composite": "[2] Custom|VisualCanvasCard|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget|NoName|475-188-1707-233|42_12389534_4_-2147410452",
+                                      "composite": "[2] Custom|VisualCanvasCard|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget|NoName|475-188-1907-233|42_12389534_4_-2147438653",
                                       "children": [
                                         {
-                                          "composite": "[1] Text|TitleWidget|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget.m_titleWidget|NoName|476-189-1706-232|42_12389534_4_-2147410487",
+                                          "composite": "[1] Text|TitleWidget|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget.m_titleWidget|NoName|476-189-1906-232|42_12389534_4_-2147438688",
                                           "children": [
                                             {
-                                              "composite": "[1] Group|QWidget|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget.m_titleWidget.qt_scrollarea_viewport|NoName|476-189-1706-232|42_12389534_4_-2147410488",
+                                              "composite": "[1] Group|QWidget|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget.m_titleWidget.qt_scrollarea_viewport|NoName|476-189-1906-232|42_12389534_4_-2147438689",
                                               "children": []
                                             }
                                           ]
@@ -113,106 +105,143 @@
                               ]
                             },
                             {
-                              "composite": "[2] Group|ShelfWidget|m_pageShelf|NoName|269-141-461-174|42_12389534_4_-2147410483",
+                              "composite": "[2] Group|ShelfWidget|m_pageShelf|NoName|269-141-461-174|42_12389534_4_-2147438684",
                               "children": []
                             },
                             {
-                              "composite": "[3] Group|FilterShelfWidget|m_filterShelf|NoName|269-217-461-272|42_12389534_4_-2147410479",
+                              "composite": "[3] Group|FilterShelfWidget|m_filterShelf|NoName|269-217-461-272|42_12389534_4_-2147438680",
                               "children": []
                             },
                             {
-                              "composite": "[4] Group|MarksCardsWidget|MarksCardsWidget|NoName|269-315-461-653|42_12389534_4_-2147410464",
+                              "composite": "[4] Group|ShelfWidget|m_measureShelf|NoName|269-696-461-859|42_12389534_4_-2147438639",
+                              "children": []
+                            },
+                            {
+                              "composite": "[5] Group|MarksCardsWidget|MarksCardsWidget|NoName|269-315-461-653|42_12389534_4_-2147438665",
                               "children": [
                                 {
-                                  "composite": "[1] Group|MarksCardScrollArea|MarksCardsWidget.scrollArea|NoName|269-315-461-653|42_12389534_4_-2147410465",
+                                  "composite": "[1] Group|MarksCardScrollArea|MarksCardsWidget.scrollArea|NoName|269-315-461-653|42_12389534_4_-2147438666",
                                   "children": [
                                     {
-                                      "composite": "[1] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport|NoName|269-315-461-653|42_12389534_4_-2147410466",
+                                      "composite": "[1] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport|NoName|269-315-461-653|42_12389534_4_-2147438667",
                                       "children": [
                                         {
-                                          "composite": "[1] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent|NoName|269-315-461-653|42_12389534_4_-2147410467",
+                                          "composite": "[1] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent|NoName|269-315-461-653|42_12389534_4_-2147438668",
                                           "children": [
                                             {
-                                              "composite": "[1] Group|QWidget|NoAutomationId|NoName|269-315-461-653|42_12389534_4_-2147410413",
+                                              "composite": "[1] Group|QWidget|NoAutomationId|NoName|269-315-461-653|42_12389534_4_-2147438613",
                                               "children": [
                                                 {
-                                                  "composite": "[1] Group|MarksCardReorderingOverlayWidget|NoAutomationId|NoName|269-315-461-653|42_12389534_4_-2147410375",
+                                                  "composite": "[1] Group|MarksCardReorderingOverlayWidget|NoAutomationId|NoName|269-315-461-653|42_12389534_4_-2147438190",
                                                   "children": [
                                                     {
-                                                      "composite": "[1] Group|MarksCardReorderingOverlayItem|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147410126",
+                                                      "composite": "[1] Group|MarksCardReorderingOverlayItem|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147437949",
                                                       "children": []
                                                     },
                                                     {
-                                                      "composite": "[2] Group|MarksCardReorderingOverlayItem|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147410125",
+                                                      "composite": "[2] Group|MarksCardReorderingOverlayItem|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147437948",
                                                       "children": []
                                                     },
                                                     {
-                                                      "composite": "[3] Group|MarksCardReorderingOverlayItem|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147410124",
+                                                      "composite": "[3] Group|MarksCardReorderingOverlayItem|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147437947",
                                                       "children": []
                                                     }
                                                   ]
                                                 },
                                                 {
-                                                  "composite": "[2] Group|AccordionTabbedWidget|m_toolbox|NoName|269-315-461-653|42_12389534_4_-2147410372",
+                                                  "composite": "[2] Group|AccordionTabbedWidget|m_toolbox|NoName|269-315-461-653|42_12389534_4_-2147438187",
                                                   "children": [
                                                     {
-                                                      "composite": "[1] Button|SearchablePushButton|m_toolbox.m_moreItemsButton|NoName|0-0-0-0|42_12389534_4_-2147410374",
+                                                      "composite": "[1] Button|SearchablePushButton|m_toolbox.m_moreItemsButton|NoName|0-0-0-0|42_12389534_4_-2147438189",
                                                       "children": []
                                                     },
                                                     {
-                                                      "composite": "[2] Group|QWidget|m_toolbox.itemContainer|NoName|269-315-461-653|42_12389534_4_-2147410373",
+                                                      "composite": "[2] Group|QWidget|m_toolbox.itemContainer|NoName|269-315-461-653|42_12389534_4_-2147438188",
                                                       "children": [
                                                         {
-                                                          "composite": "[1] Group|AccordionItem|NoAutomationId|NoName|269-315-461-355|42_12389534_4_-2147410360",
+                                                          "composite": "[1] Group|AccordionItem|NoAutomationId|NoName|269-315-461-573|42_12389534_4_-2147438175",
                                                           "children": [
                                                             {
-                                                              "composite": "[1] Group|TabFrame|m_tab|NoName|269-315-461-355|42_12389534_4_-2147410361",
+                                                              "composite": "[1] Custom|QFrame|m_frame|NoName|269-355-461-573|42_12389534_4_-2147437961",
                                                               "children": [
                                                                 {
-                                                                  "composite": "[1] Group|MarksCardTabLabel|m_tab.m_label|NoName|269-315-461-355|42_12389534_4_-2147410367",
+                                                                  "composite": "[1] Group|MarksCardTabContents|m_frame.m_contents|NoName|269-355-461-573|42_12389534_4_-2147437954",
                                                                   "children": [
                                                                     {
-                                                                      "composite": "[1] Text|TableauLabel|NoAutomationId|All|297-315-317-355|42_12389534_4_-2147410364",
-                                                                      "children": []
-                                                                    },
-                                                                    {
-                                                                      "composite": "[2] Text|QLabel|NoAutomationId|NoName|317-315-326-355|42_12389534_4_-2147410363",
-                                                                      "children": []
-                                                                    },
-                                                                    {
-                                                                      "composite": "[3] Button|TableauButton|NoAutomationId|NoName|276-328-290-342|42_12389534_4_-2147410362",
-                                                                      "children": []
-                                                                    }
-                                                                  ]
-                                                                }
-                                                              ]
-                                                            }
-                                                          ]
-                                                        },
-                                                        {
-                                                          "composite": "[2] Group|AccordionItem|NoAutomationId|NoName|269-355-461-613|42_12389534_4_-2147410277",
-                                                          "children": [
-                                                            {
-                                                              "composite": "[1] Custom|QFrame|m_frame|NoName|269-395-461-613|42_12389534_4_-2147410102",
-                                                              "children": [
-                                                                {
-                                                                  "composite": "[1] Group|MarksCardTabContents|m_frame.m_contents|NoName|269-395-461-613|42_12389534_4_-2147409886",
-                                                                  "children": [
-                                                                    {
-                                                                      "composite": "[1] Group|QWidget|m_frame.m_contents.primitiveComboBoxWidget|NoName|276-402-454-433|42_12389534_4_-2147410275",
+                                                                      "composite": "[1] Group|QWidget|m_frame.m_contents.primitiveComboBoxWidget|NoName|276-362-454-393|42_12389534_4_-2147438173",
                                                                       "children": [
                                                                         {
-                                                                          "composite": "[1] ComboBox|TableauComboBox|m_frame.m_contents.primitiveComboBoxWidget.primitiveComboBox|NoName|276-402-454-426|42_12389534_4_-2147410282",
+                                                                          "composite": "[1] ComboBox|TableauComboBox|m_frame.m_contents.primitiveComboBoxWidget.primitiveComboBox|NoName|276-362-454-386|42_12389534_4_-2147438180",
                                                                           "children": [
                                                                             {
-                                                                              "composite": "[1] List|QComboBoxListView|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147410288",
+                                                                              "composite": "[1] List|QComboBoxListView|NoAutomationId|NoName|0-0-0-0|42_12389534_4_-2147438186",
                                                                               "children": [
                                                                                 {
-                                                                                  "composite": "[1] ListItem|UnknownClass|NoAutomationId|Automatic|1-1-111-27|42_12389534_4_-2147409403",
+                                                                                  "composite": "[1] ListItem|UnknownClass|NoAutomationId|Automatic|277-386-453-412|42_12389534_4_-2147433885",
                                                                                   "children": []
                                                                                 },
                                                                                 {
-                                                                                  "composite": "[2] ListItem|UnknownClass|NoAutomationId|Bar|1-27-100-53|42_12389534_4_-2147409402",
+                                                                                  "composite": "[2] ListItem|UnknownClass|NoAutomationId|Bar|277-412-453-438|42_12389534_4_-2147433884",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[3] ListItem|UnknownClass|NoAutomationId|Line|277-438-453-464|42_12389534_4_-2147433883",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[4] ListItem|UnknownClass|NoAutomationId|Area|277-464-453-490|42_12389534_4_-2147433882",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[5] ListItem|UnknownClass|NoAutomationId|Square|277-490-453-516|42_12389534_4_-2147433881",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[6] ListItem|UnknownClass|NoAutomationId|Circle|277-516-453-542|42_12389534_4_-2147433880",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[7] ListItem|UnknownClass|NoAutomationId|Shape|277-542-453-568|42_12389534_4_-2147433879",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[8] ListItem|UnknownClass|NoAutomationId|Text|277-568-453-594|42_12389534_4_-2147433878",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[9] ListItem|UnknownClass|NoAutomationId|Map|277-594-453-620|42_12389534_4_-2147433877",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[10] ListItem|UnknownClass|NoAutomationId|Pie|277-620-453-646|42_12389534_4_-2147433876",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[11] ListItem|UnknownClass|NoAutomationId|Gantt Bar|277-646-453-672|42_12389534_4_-2147433875",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[12] ListItem|UnknownClass|NoAutomationId|Polygon|277-672-453-698|42_12389534_4_-2147433874",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[13] ListItem|UnknownClass|NoAutomationId|Density|277-698-453-724|42_12389534_4_-2147433873",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[14] ListItem|UnknownClass|NoAutomationId|Multiple|277-724-453-750|42_12389534_4_-2147433872",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[15] ListItem|UnknownClass|NoAutomationId|NoName|277-750-453-760|42_12389534_4_-2147433855",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[16] ListItem|UnknownClass|NoAutomationId|Viz Extensions|277-760-453-786|42_12389534_4_-2147433854",
+                                                                                  "children": []
+                                                                                },
+                                                                                {
+                                                                                  "composite": "[17] ListItem|UnknownClass|NoAutomationId|Add Extension|277-786-453-817|42_12389534_4_-2147433853",
                                                                                   "children": []
                                                                                 }
                                                                               ]
@@ -222,49 +251,49 @@
                                                                       ]
                                                                     },
                                                                     {
-                                                                      "composite": "[2] Group|QWidget|m_frame.m_contents.dropTargetContainerWidget|NoName|276-433-454-544|42_12389534_4_-2147409887",
+                                                                      "composite": "[2] Group|QWidget|m_frame.m_contents.dropTargetContainerWidget|NoName|276-393-454-504|42_12389534_4_-2147437955",
                                                                       "children": [
                                                                         {
-                                                                          "composite": "[1] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.bottomCenterDropTarget|NoName|335-492-395-544|42_12389534_4_-2147409892",
+                                                                          "composite": "[1] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.bottomCenterDropTarget|NoName|335-452-395-504|42_12389534_4_-2147437960",
                                                                           "children": [
                                                                             {
-                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.bottomCenterDropTarget.DropTargetWidgetButton_Tooltip|Tooltip|337-492-393-544|42_12389534_4_-2147410214",
+                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.bottomCenterDropTarget.DropTargetWidgetButton_Tooltip|Tooltip|337-452-393-504|42_12389534_4_-2147438112",
                                                                               "children": []
                                                                             }
                                                                           ]
                                                                         },
                                                                         {
-                                                                          "composite": "[2] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.topCenterDropTarget|NoName|335-433-395-492|42_12389534_4_-2147409891",
+                                                                          "composite": "[2] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.topCenterDropTarget|NoName|335-393-395-452|42_12389534_4_-2147437959",
                                                                           "children": [
                                                                             {
-                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.topCenterDropTarget.DropTargetWidgetButton_Size|Size|337-433-393-485|42_12389534_4_-2147410237",
+                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.topCenterDropTarget.DropTargetWidgetButton_Size|Size|337-393-393-445|42_12389534_4_-2147438135",
                                                                               "children": []
                                                                             }
                                                                           ]
                                                                         },
                                                                         {
-                                                                          "composite": "[3] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.topRightDropTarget|NoName|395-433-454-492|42_12389534_4_-2147409890",
+                                                                          "composite": "[3] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.topRightDropTarget|NoName|395-393-454-452|42_12389534_4_-2147437958",
                                                                           "children": [
                                                                             {
-                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.topRightDropTarget.DropTargetWidgetButton_Text|Label|400-433-454-485|42_12389534_4_-2147410216",
+                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.topRightDropTarget.DropTargetWidgetButton_Text|Label|400-393-454-445|42_12389534_4_-2147438114",
                                                                               "children": []
                                                                             }
                                                                           ]
                                                                         },
                                                                         {
-                                                                          "composite": "[4] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.topLeftDropTarget|NoName|276-433-335-492|42_12389534_4_-2147409889",
+                                                                          "composite": "[4] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.topLeftDropTarget|NoName|276-393-335-452|42_12389534_4_-2147437957",
                                                                           "children": [
                                                                             {
-                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.topLeftDropTarget.DropTargetWidgetButton_Color|Color|276-433-330-485|42_12389534_4_-2147410250",
+                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.topLeftDropTarget.DropTargetWidgetButton_Color|Color|276-393-330-445|42_12389534_4_-2147438148",
                                                                               "children": []
                                                                             }
                                                                           ]
                                                                         },
                                                                         {
-                                                                          "composite": "[5] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.bottomLeftDropTarget|NoName|276-492-335-544|42_12389534_4_-2147409888",
+                                                                          "composite": "[5] Group|DropTargetWidget|m_frame.m_contents.dropTargetContainerWidget.bottomLeftDropTarget|NoName|276-452-335-504|42_12389534_4_-2147437956",
                                                                           "children": [
                                                                             {
-                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.bottomLeftDropTarget.DropTargetWidgetButton_LOD|Detail|276-492-330-544|42_12389534_4_-2147410215",
+                                                                              "composite": "[1] Button|TableauButton|m_frame.m_contents.dropTargetContainerWidget.bottomLeftDropTarget.DropTargetWidgetButton_LOD|Detail|276-452-330-504|42_12389534_4_-2147438113",
                                                                               "children": []
                                                                             }
                                                                           ]
@@ -272,7 +301,7 @@
                                                                       ]
                                                                     },
                                                                     {
-                                                                      "composite": "[3] Group|ShelfWidget|m_frame.m_contents.m_encodingsShelf|NoName|276-558-454-612|42_12389534_4_-2147409882",
+                                                                      "composite": "[3] Group|ShelfWidget|m_frame.m_contents.m_encodingsShelf|NoName|276-518-454-572|42_12389534_4_-2147437950",
                                                                       "children": []
                                                                     }
                                                                   ]
@@ -280,21 +309,21 @@
                                                               ]
                                                             },
                                                             {
-                                                              "composite": "[2] Group|TabFrame|m_tab|NoName|269-355-461-395|42_12389534_4_-2147410278",
+                                                              "composite": "[2] Group|TabFrame|m_tab|NoName|269-315-461-355|42_12389534_4_-2147438176",
                                                               "children": [
                                                                 {
-                                                                  "composite": "[1] Group|MarksCardTabLabel|m_tab.m_label|NoName|269-355-461-395|42_12389534_4_-2147410284",
+                                                                  "composite": "[1] Group|MarksCardTabLabel|m_tab.m_label|NoName|269-315-461-355|42_12389534_4_-2147438182",
                                                                   "children": [
                                                                     {
-                                                                      "composite": "[1] Text|TableauLabel|NoAutomationId|SUM(Arr Delay)|297-355-426-395|42_12389534_4_-2147410281",
+                                                                      "composite": "[1] Text|TableauLabel|NoAutomationId|All|307-315-329-355|42_12389534_4_-2147438179",
                                                                       "children": []
                                                                     },
                                                                     {
-                                                                      "composite": "[2] Text|QLabel|NoAutomationId|NoName|426-355-435-395|42_12389534_4_-2147410280",
+                                                                      "composite": "[2] Text|QLabel|NoAutomationId|NoName|329-315-338-355|42_12389534_4_-2147438178",
                                                                       "children": []
                                                                     },
                                                                     {
-                                                                      "composite": "[3] Button|TableauButton|NoAutomationId|NoName|276-368-290-382|42_12389534_4_-2147410279",
+                                                                      "composite": "[3] Button|TableauButton|NoAutomationId|NoName|276-326-300-344|42_12389534_4_-2147438177",
                                                                       "children": []
                                                                     }
                                                                   ]
@@ -304,24 +333,51 @@
                                                           ]
                                                         },
                                                         {
-                                                          "composite": "[3] Group|AccordionItem|NoAutomationId|NoName|269-613-461-653|42_12389534_4_-2147410202",
+                                                          "composite": "[2] Group|AccordionItem|NoAutomationId|NoName|269-573-461-613|42_12389534_4_-2147438100",
                                                           "children": [
                                                             {
-                                                              "composite": "[1] Group|TabFrame|m_tab|NoName|269-613-461-653|42_12389534_4_-2147410203",
+                                                              "composite": "[1] Group|TabFrame|m_tab|NoName|269-573-461-613|42_12389534_4_-2147438101",
                                                               "children": [
                                                                 {
-                                                                  "composite": "[1] Group|MarksCardTabLabel|m_tab.m_label|NoName|269-613-461-653|42_12389534_4_-2147410209",
+                                                                  "composite": "[1] Group|MarksCardTabLabel|m_tab.m_label|NoName|269-573-461-613|42_12389534_4_-2147438107",
                                                                   "children": [
                                                                     {
-                                                                      "composite": "[1] Text|TableauLabel|NoAutomationId|SUM(Dep Delay)|297-613-428-653|42_12389534_4_-2147410206",
+                                                                      "composite": "[1] Text|TableauLabel|NoAutomationId|Measure Values|297-573-421-613|42_12389534_4_-2147438104",
                                                                       "children": []
                                                                     },
                                                                     {
-                                                                      "composite": "[2] Text|QLabel|NoAutomationId|NoName|428-613-437-653|42_12389534_4_-2147410205",
+                                                                      "composite": "[2] Text|QLabel|NoAutomationId|NoName|421-573-430-613|42_12389534_4_-2147438103",
                                                                       "children": []
                                                                     },
                                                                     {
-                                                                      "composite": "[3] Button|TableauButton|NoAutomationId|NoName|276-626-290-640|42_12389534_4_-2147410204",
+                                                                      "composite": "[3] Button|TableauButton|NoAutomationId|NoName|276-586-290-600|42_12389534_4_-2147438102",
+                                                                      "children": []
+                                                                    }
+                                                                  ]
+                                                                }
+                                                              ]
+                                                            }
+                                                          ]
+                                                        },
+                                                        {
+                                                          "composite": "[3] Group|AccordionItem|NoAutomationId|NoName|269-613-461-653|42_12389534_4_-2147438025",
+                                                          "children": [
+                                                            {
+                                                              "composite": "[1] Group|TabFrame|m_tab|NoName|269-613-461-653|42_12389534_4_-2147438026",
+                                                              "children": [
+                                                                {
+                                                                  "composite": "[1] Group|MarksCardTabLabel|m_tab.m_label|NoName|269-613-461-653|42_12389534_4_-2147438032",
+                                                                  "children": [
+                                                                    {
+                                                                      "composite": "[1] Text|TableauLabel|NoAutomationId|SUM(Security Delay)|297-613-447-653|42_12389534_4_-2147438029",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "composite": "[2] Text|QLabel|NoAutomationId|NoName|447-613-456-653|42_12389534_4_-2147438028",
+                                                                      "children": []
+                                                                    },
+                                                                    {
+                                                                      "composite": "[3] Button|TableauButton|NoAutomationId|NoName|276-626-290-640|42_12389534_4_-2147438027",
                                                                       "children": []
                                                                     }
                                                                   ]
@@ -345,15 +401,11 @@
                               ]
                             },
                             {
-                              "composite": "[5] Group|ShelfWidget|m_xAxisShelf|NoName|628-106-1913-136|42_12389534_4_-2147410460",
+                              "composite": "[6] Group|ShelfWidget|m_xAxisShelf|NoName|628-106-1913-136|42_12389534_4_-2147438661",
                               "children": []
                             },
                             {
-                              "composite": "[6] Group|ShelfWidget|m_yAxisShelf|NoName|628-144-1913-174|42_12389534_4_-2147410456",
-                              "children": []
-                            },
-                            {
-                              "composite": "[7] Group|QuantitativeColorLegendWidget|QuantitativeLegend_Sheet 15_sum:Calculation_1101693109176995844:qk|NoName|1721-217-1913-261|42_12389534_4_-2147409405",
+                              "composite": "[7] Group|ShelfWidget|m_yAxisShelf|NoName|628-144-1913-174|42_12389534_4_-2147438657",
                               "children": []
                             }
                           ]
@@ -696,7 +748,7 @@
                       "composite": "[1] Group|StatusBarPaneWidget|NoAutomationId|NoName|0-995-1498-1020|42_12389534_4_-2147483178",
                       "children": [
                         {
-                          "composite": "[1] Text|QLabel|m_statusBarStatsPaneLabel|674 marks       337 rows by 2 columns       SUM(Arr Delay): -780,563|3-995-1498-1020|42_12389534_4_-2147479968",
+                          "composite": "[1] Text|QLabel|m_statusBarStatsPaneLabel|6 marks       6 rows by 2 columns       SUM of Measure Values: 6,739|3-995-1498-1020|42_12389534_4_-2147479968",
                           "children": []
                         }
                       ]
@@ -895,107 +947,103 @@
                                           "composite": "[5] Tree|SVDropTargetTreeWidget|m_commonTree|NoName|0-247-261-957|42_12389534_4_-2147483118",
                                           "children": [
                                             {
-                                              "composite": "[1] TreeItem|UnknownClass|NoAutomationId|Cancellation Code|18-247-261-273|42_12389534_4_-2147409626",
+                                              "composite": "[1] TreeItem|UnknownClass|NoAutomationId|Cancellation Code|18-247-261-273|42_12389534_4_-2147454733",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[2] TreeItem|UnknownClass|NoAutomationId|Dest|18-273-261-299|42_12389534_4_-2147409625",
+                                              "composite": "[2] TreeItem|UnknownClass|NoAutomationId|Dest|18-273-261-299|42_12389534_4_-2147454731",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[3] TreeItem|UnknownClass|NoAutomationId|Dest City Name|18-299-261-325|42_12389534_4_-2147409624",
+                                              "composite": "[3] TreeItem|UnknownClass|NoAutomationId|Dest City Name|18-299-261-325|42_12389534_4_-2147454730",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[4] TreeItem|UnknownClass|NoAutomationId|Dest State Abr|18-325-261-351|42_12389534_4_-2147409623",
+                                              "composite": "[4] TreeItem|UnknownClass|NoAutomationId|Dest State Abr|18-325-261-351|42_12389534_4_-2147454729",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[5] TreeItem|UnknownClass|NoAutomationId|Fl Date|18-351-261-377|42_12389534_4_-2147409622",
+                                              "composite": "[5] TreeItem|UnknownClass|NoAutomationId|Fl Date|18-351-261-377|42_12389534_4_-2147454728",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[6] TreeItem|UnknownClass|NoAutomationId|Op Unique Carrier|18-377-261-403|42_12389534_4_-2147409621",
+                                              "composite": "[6] TreeItem|UnknownClass|NoAutomationId|Op Unique Carrier|18-377-261-403|42_12389534_4_-2147454727",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[7] TreeItem|UnknownClass|NoAutomationId|Origin|18-403-261-429|42_12389534_4_-2147409620",
+                                              "composite": "[7] TreeItem|UnknownClass|NoAutomationId|Origin|18-403-261-429|42_12389534_4_-2147454726",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[8] TreeItem|UnknownClass|NoAutomationId|Origin City Name|18-429-261-455|42_12389534_4_-2147409619",
+                                              "composite": "[8] TreeItem|UnknownClass|NoAutomationId|Origin City Name|18-429-261-455|42_12389534_4_-2147454725",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[9] TreeItem|UnknownClass|NoAutomationId|Origin State Abr|18-455-261-481|42_12389534_4_-2147409618",
+                                              "composite": "[9] TreeItem|UnknownClass|NoAutomationId|Origin State Abr|18-455-261-481|42_12389534_4_-2147454724",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[10] TreeItem|UnknownClass|NoAutomationId|Measure Names|18-481-261-507|42_12389534_4_-2147409617",
+                                              "composite": "[10] TreeItem|UnknownClass|NoAutomationId|Measure Names|18-481-261-507|42_12389534_4_-2147454723",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[11] TreeItem|UnknownClass|NoAutomationId|NoName|18-507-261-509|42_12389534_4_-2147409616",
+                                              "composite": "[11] TreeItem|UnknownClass|NoAutomationId|NoName|18-507-261-509|42_12389534_4_-2147454722",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[12] TreeItem|UnknownClass|NoAutomationId|Arr Del15|18-509-261-535|42_12389534_4_-2147409615",
+                                              "composite": "[12] TreeItem|UnknownClass|NoAutomationId|Arr Del15|18-509-261-535|42_12389534_4_-2147454721",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[13] TreeItem|UnknownClass|NoAutomationId|Arr Delay|18-535-261-561|42_12389534_4_-2147409614",
+                                              "composite": "[13] TreeItem|UnknownClass|NoAutomationId|Arr Delay|18-535-261-561|42_12389534_4_-2147454720",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[14] TreeItem|UnknownClass|NoAutomationId|Cancelled|18-561-261-587|42_12389534_4_-2147409613",
+                                              "composite": "[14] TreeItem|UnknownClass|NoAutomationId|Cancelled|18-561-261-587|42_12389534_4_-2147454719",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[15] TreeItem|UnknownClass|NoAutomationId|Carrier Delay|18-587-261-613|42_12389534_4_-2147409612",
+                                              "composite": "[15] TreeItem|UnknownClass|NoAutomationId|Carrier Delay|18-587-261-613|42_12389534_4_-2147454734",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[16] TreeItem|UnknownClass|NoAutomationId|Dep Del15|18-613-261-639|42_12389534_4_-2147409611",
+                                              "composite": "[16] TreeItem|UnknownClass|NoAutomationId|Dep Del15|18-613-261-639|42_12389534_4_-2147454718",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[17] TreeItem|UnknownClass|NoAutomationId|Dep Delay|18-639-261-665|42_12389534_4_-2147409610",
+                                              "composite": "[17] TreeItem|UnknownClass|NoAutomationId|Dep Delay|18-639-261-665|42_12389534_4_-2147454717",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[18] TreeItem|UnknownClass|NoAutomationId|Late Aircraft Delay|18-665-261-691|42_12389534_4_-2147409609",
+                                              "composite": "[18] TreeItem|UnknownClass|NoAutomationId|Late Aircraft Delay|18-665-261-691|42_12389534_4_-2147454716",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[19] TreeItem|UnknownClass|NoAutomationId|Nas Delay|18-691-261-717|42_12389534_4_-2147409608",
+                                              "composite": "[19] TreeItem|UnknownClass|NoAutomationId|Nas Delay|18-691-261-717|42_12389534_4_-2147454715",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[20] TreeItem|UnknownClass|NoAutomationId|Security Delay|18-717-261-743|42_12389534_4_-2147409607",
+                                              "composite": "[20] TreeItem|UnknownClass|NoAutomationId|Security Delay|18-717-261-743|42_12389534_4_-2147454714",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[21] TreeItem|UnknownClass|NoAutomationId|Total Delay|18-743-261-769|42_12389534_4_-2147409636",
+                                              "composite": "[21] TreeItem|UnknownClass|NoAutomationId|Weather Delay|18-743-261-769|42_12389534_4_-2147454713",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[22] TreeItem|UnknownClass|NoAutomationId|Weather Delay|18-769-261-795|42_12389534_4_-2147409606",
+                                              "composite": "[22] TreeItem|UnknownClass|NoAutomationId|Book3.csv (Count)|18-769-261-795|42_12389534_4_-2147454712",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[23] TreeItem|UnknownClass|NoAutomationId|Book3.csv (Count)|18-795-261-821|42_12389534_4_-2147409605",
+                                              "composite": "[23] TreeItem|UnknownClass|NoAutomationId|Latitude (generated)|18-795-261-821|42_12389534_4_-2147454711",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[24] TreeItem|UnknownClass|NoAutomationId|Latitude (generated)|18-821-261-847|42_12389534_4_-2147409604",
+                                              "composite": "[24] TreeItem|UnknownClass|NoAutomationId|Longitude (generated)|18-821-261-847|42_12389534_4_-2147454710",
                                               "children": []
                                             },
                                             {
-                                              "composite": "[25] TreeItem|UnknownClass|NoAutomationId|Longitude (generated)|18-847-261-873|42_12389534_4_-2147409603",
-                                              "children": []
-                                            },
-                                            {
-                                              "composite": "[26] TreeItem|UnknownClass|NoAutomationId|Measure Values|18-873-261-899|42_12389534_4_-2147409602",
+                                              "composite": "[25] TreeItem|UnknownClass|NoAutomationId|Measure Values|18-847-261-873|42_12389534_4_-2147454709",
                                               "children": []
                                             }
                                           ]
@@ -1099,47 +1147,47 @@
                       "composite": "[3] List|SheetListWidget|SheetTabsWidget.SheetListWidget|NoName|163-958-989-994|42_12389534_4_-2147483149",
                       "children": [
                         {
-                          "composite": "[1] ListItem|UnknownClass|NoAutomationId|NoName|163-958-234-994|42_12389534_4_-2147410726",
+                          "composite": "[1] ListItem|UnknownClass|NoAutomationId|NoName|163-958-234-994|42_12389534_4_-2147477424",
                           "children": []
                         },
                         {
-                          "composite": "[2] ListItem|UnknownClass|NoAutomationId|NoName|234-958-305-994|42_12389534_4_-2147410725",
+                          "composite": "[2] ListItem|UnknownClass|NoAutomationId|NoName|234-958-305-994|42_12389534_4_-2147476719",
                           "children": []
                         },
                         {
-                          "composite": "[3] ListItem|UnknownClass|NoAutomationId|NoName|305-958-376-994|42_12389534_4_-2147410724",
+                          "composite": "[3] ListItem|UnknownClass|NoAutomationId|NoName|305-958-376-994|42_12389534_4_-2147475895",
                           "children": []
                         },
                         {
-                          "composite": "[4] ListItem|UnknownClass|NoAutomationId|NoName|376-958-447-994|42_12389534_4_-2147410723",
+                          "composite": "[4] ListItem|UnknownClass|NoAutomationId|NoName|376-958-447-994|42_12389534_4_-2147474992",
                           "children": []
                         },
                         {
-                          "composite": "[5] ListItem|UnknownClass|NoAutomationId|NoName|447-958-518-994|42_12389534_4_-2147410722",
+                          "composite": "[5] ListItem|UnknownClass|NoAutomationId|NoName|447-958-518-994|42_12389534_4_-2147472428",
                           "children": []
                         },
                         {
-                          "composite": "[6] ListItem|UnknownClass|NoAutomationId|NoName|518-958-589-994|42_12389534_4_-2147410721",
+                          "composite": "[6] ListItem|UnknownClass|NoAutomationId|NoName|518-958-589-994|42_12389534_4_-2147466855",
                           "children": []
                         },
                         {
-                          "composite": "[7] ListItem|UnknownClass|NoAutomationId|NoName|589-958-669-994|42_12389534_4_-2147410720",
+                          "composite": "[7] ListItem|UnknownClass|NoAutomationId|NoName|589-958-669-994|42_12389534_4_-2147466132",
                           "children": []
                         },
                         {
-                          "composite": "[8] ListItem|UnknownClass|NoAutomationId|NoName|669-958-749-994|42_12389534_4_-2147410719",
+                          "composite": "[8] ListItem|UnknownClass|NoAutomationId|NoName|669-958-749-994|42_12389534_4_-2147465235",
                           "children": []
                         },
                         {
-                          "composite": "[9] ListItem|UnknownClass|NoAutomationId|NoName|749-958-829-994|42_12389534_4_-2147410743",
+                          "composite": "[9] ListItem|UnknownClass|NoAutomationId|NoName|749-958-829-994|42_12389534_4_-2147439408",
                           "children": []
                         },
                         {
-                          "composite": "[10] ListItem|UnknownClass|NoAutomationId|NoName|829-958-909-994|42_12389534_4_-2147410718",
+                          "composite": "[10] ListItem|UnknownClass|NoAutomationId|NoName|829-958-909-994|42_12389534_4_-2147439048",
                           "children": []
                         },
                         {
-                          "composite": "[11] ListItem|UnknownClass|NoAutomationId|NoName|909-958-989-994|42_12389534_4_-2147410489",
+                          "composite": "[11] ListItem|UnknownClass|NoAutomationId|NoName|909-958-989-994|42_12389534_4_-2147438690",
                           "children": []
                         }
                       ]
@@ -1221,6 +1269,6 @@
         }
       ]
     },
-    "prompt": "markstabsmain"
+    "prompt": "measureValueTab"
   }
 ]

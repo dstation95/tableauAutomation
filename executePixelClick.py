@@ -282,7 +282,7 @@ def executeRelativeClick(origin_name, index, current_x, current_y):
     new_click_y = current_y + dy
     print(f"Simulating relative click at coordinates: ({new_click_x}, {new_click_y})")
     pyautogui.moveTo(new_click_x, new_click_y)
-    time.sleep(2)
+    # time.sleep(2)
     pyautogui.click(new_click_x, new_click_y)
     print("Relative click simulation complete.")
     
