@@ -1,3 +1,6 @@
 newSheet()
-createBarChart(x_vars=["OP_UNIQUE_CARRIER"], y_vars=["total_delay"])
-DragToColor("OP_UNIQUE_CARRIER", 0)
+createBarChart(x_vars=["OP_UNIQUE_CARRIER"], y_vars=["ORIGIN"])
+newSheet()
+createLineChart(x_vars=["FL_DATE"], y_vars=["OP_UNIQUE_CARRIER"], date_function="DATETRUNC", date_component="month")
+newSheet()
+createScatterChart(x_vars=["ORIGIN_CITY_NAME"], y_vars=["OP_UNIQUE_CARRIER"])

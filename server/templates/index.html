@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="sandbox.js" defer></script>
+</head>
+<body>
+    <h1>this is a test</h1>
+    <iframe  id="inlineFrameExample"
+  title="Inline Frame Example"
+  width="1060px"
+  height="1000px"
+  src="http://3.141.76.84:8080/guacamole/">
+</iframe>
+<div class="container">
+  <h2>Upload Document(dev not production)</h2>
+  <form id="upload-form" action="http://127.0.0.1:5000/upload-file" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file">
+    <button type="submit">Upload File</button>
+</form>
+
+  <h2>Submit Your Task</h2>
+  <form action='/submit_task' method="POST">
+      <div class="form-group">
+          <label for="task_prompt">Task Prompt:</label>
+          <textarea id="task_prompt" name="task_prompt" required></textarea>
+      </div>
+      <button type="submit">Submit Task</button>
+  </form>
+</div>
+</body>
+<script>
+  document.getElementById("upload-form").onsubmit = async function(event) {
+      event.preventDefault();
+      let formData = new FormData(this);
+
+      let response = await fetch("http://127.0.0.1:5000/upload-file", {
+          method: "POST",
+          body: formData
+      });
+
+      let result = await response.json();
+      alert(result.message);
+  };
+</script>
+
+</html>
+<!--VNC password is :
+test
+windows username:
+Administrator
+instance windows password:
+nZj9WuSr?w8.WoAEy(g-DIO)6&mWMZRk
+windows ip:
+3.16.135.230
+see if it crashes in the instance state
+commands:
+ sudo ssh -i '/mnt/c/Users/jimso/Downloads/test_tableau.pem' ubuntu@3.141.76.84
+sudo systemctl restart tomcat9
+sudo systemctl restart guacd
+http://3.141.76.84:8080/guacamole/
+Current copilot:
+https://copilot.microsoft.com/chats/F7x6GeydqM3cKopsZBt5p
+//test flask 
+curl -X POST -d "task-prompt=Test task" http://18.222.157.2:5000/receive-task
+
+-->

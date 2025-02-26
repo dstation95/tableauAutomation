@@ -33,20 +33,21 @@ def generate_composite_id(elem_info):
     rt_str = runtime_id_to_str(elem_info.runtime_id)
     return f"{control_type}|{class_name}|{auto_id}|{name}|{rect_str}|{rt_str}"
 
-def dump_ui_tree(elem_info):
-    tree = {}
-    tree["composite"] = generate_composite_id(elem_info)
-    tree["children"] = []
+def dump_direct_children(elem_info):
+    """
+    Returns a list of dictionaries representing the immediate children
+    of the provided element, each with its composite ID.
+    """
+    direct_children = []
     try:
         children = elem_info.children()
     except Exception:
         children = []
-    for index, child in enumerate(children, start=1):
-        child_composite = f"[{index}] " + generate_composite_id(child)
-        subtree = dump_ui_tree(child)
-        subtree["composite"] = child_composite
-        tree["children"].append(subtree)
-    return tree
+    for child in children:
+        direct_children.append({
+            "composite": generate_composite_id(child)
+        })
+    return direct_children
 
 def load_json_examples(filename):
     if os.path.exists(filename):
@@ -90,18 +91,9 @@ def search_for_runtime_id(wrapper, target_rt):
 def executeExpandedClick(task_name, guide=""):
     """
     Performs a UI click based on a click recording specified by task_name.
-    If task_name (i.e. the input prompt) is empty, then only the additional guide text
-    is used for inference.
-    
-    Parameters:
-      task_name (str): The task name used to locate JSON example files in the recordings/clicks folder.
-      guide (str, optional): Additional text to be added into the ChatGPT prompt.
-    
-    Returns:
-      tuple: The (x, y) coordinates of the center of the clicked UI element.
+    It captures only the direct children of the main "Tableau" window.
     """
-    # Normalize the task name: lowercase and replace spaces with underscores.
-    if (task_name):
+    if task_name:
         task_name = task_name.lower().strip()
         clicks_dir = os.path.join(os.getcwd(), "recordings", "clicks")
         input_examples_file = os.path.join(clicks_dir, f"{task_name}_input.json")
@@ -113,13 +105,13 @@ def executeExpandedClick(task_name, guide=""):
         example_text = ""
         for inp, out in zip(input_examples, output_examples):
             example_text += f"Example:\nInput: {json.dumps(inp, indent=2)}\nOutput: {json.dumps(out, indent=2)}\n\n"
-        
-    additional_guide = ""
-    if guide.strip():
-        additional_guide = f"\nAdditional Guide:\n{guide}\n"
+    else:
+        example_text = ""
+    
+    additional_guide = f"\nAdditional Guide:\n{guide}\n" if guide.strip() else ""
     
     # ------------------------------------------------------------
-    # Capture a New UI Snapshot (including popups) from the major "Tableau" window.
+    # Capture a New UI Snapshot from the "Tableau" window.
     # ------------------------------------------------------------
     time.sleep(2)
     all_windows = Desktop(backend="uia").windows(visible_only=True)
@@ -127,55 +119,49 @@ def executeExpandedClick(task_name, guide=""):
         print("No windows found.")
         sys.exit(1)
     
-    # Look for the window whose title is exactly "Tableau"
-    major_tableau_windows = [w for w in all_windows if w.window_text().strip() == "Tableau"]
-    if not major_tableau_windows:
-        print("No major Tableau window found.")
+    # Filter to find the window whose title is exactly "Tableau"
+    tableau_windows = [w for w in all_windows if w.window_text().strip() == "Tableau"]
+    if not tableau_windows:
+        print("No window with title 'Tableau' found.")
         sys.exit(1)
     
-    def window_area(win):
-        rect = win.rectangle()
-        return (rect.right - rect.left) * (rect.bottom - rect.top)
-    
-    target_window = max(major_tableau_windows, key=window_area)
+    # Use the first window found with the exact title "Tableau"
+    target_window = tableau_windows[0]
     print(f"Connected to window: Handle {target_window.handle}, Title: {target_window.window_text()}")
     
+    # Connect via pywinauto using the exact title
     app = Application(backend="uia").connect(handle=target_window.handle)
     main_window = app.window(handle=target_window.handle)
     
+    # Verify the title of the connected window
+    print("Main window title:", main_window.window_text())
+    
+    # Dump only the immediate (direct) children of the main Tableau window
+    direct_children = dump_direct_children(main_window.element_info)
+    
     composite_snapshot = {
-        "main_window": dump_ui_tree(main_window.element_info),
-        "popups": []
+        "main_window": direct_children
     }
     
-    tableau_pid = main_window.process_id()
-    
-    # Look for additional visible windows that belong to the same process.
-    for win in all_windows:
-        if win.handle != target_window.handle and win.process_id() == tableau_pid:
-            print(f"Found additional window: Handle {win.handle}, Title: {win.window_text()}")
-            composite_snapshot["popups"].append({
-                "handle": win.handle,
-                "title": win.window_text(),
-                "ui_tree": dump_ui_tree(win.element_info)
-            })
-    
     new_snapshot_str = json.dumps(composite_snapshot, indent=2)
-    print("Composite UI Snapshot captured.")
+    # print("Direct children snapshot captured:")
+    # print(new_snapshot_str)
     
+    # Ensure the "test" folder exists and save the JSON there
+    os.makedirs('test', exist_ok=True)
+    with open(os.path.join('test', 'test.json'), 'w') as f:
+        f.write(new_snapshot_str)
     
     # ------------------------------------------------------------
     # Build the Full Prompt for Inference.
-    # If the task_name is empty, use only the guide.
     # ------------------------------------------------------------
     if not task_name:
         full_prompt = f"""
-        Follow these directions to figure out which element from the snapshot you need to find and return the runtimeID associted wiht the directions
-        {additional_guide}\n
-        {additional_guide}
-        Now, given the current UI snapshot and following the examples, return ONLY the runtime_id of the UI element that should be clicked.
-        and make the runtimeId returned be associted withe lement that fits the directions before
-        Current UI snapshot:\n{new_snapshot_str}"""
+Follow these directions to figure out which element from the snapshot you need to find and return the runtime_id associated with the directions.
+{additional_guide}
+Now, given the current UI snapshot and following the instructions above, return ONLY the runtime_id of the UI element that should be clicked.
+Current UI snapshot:
+{new_snapshot_str}"""
     else:
         full_prompt = f"""
 Below are examples of UI snapshots with their corresponding runtime IDs for the button click task.
@@ -188,7 +174,6 @@ Current UI snapshot:
     # ------------------------------------------------------------
     # Call the OpenAI Chat API for Inference.
     # ------------------------------------------------------------
-    # print(full_prompt)
     predicted_runtime_id = openai_infer(full_prompt)
     print("Predicted runtime ID:", predicted_runtime_id)
     

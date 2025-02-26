@@ -30,42 +30,35 @@ from testAbstract import (
     sortAscending, sortDescending, swapXandY, changeTitle, filterByTopDimension,
     dualAxis, changeAxisMeasure, showTrendLine, changeAxisMeasureToDiscrete,
     changeAxisDiscreteMeasureToContinious, changeDateType, switchGraph,
-    changeAggregation, createBarChart, createScatterChart, createLineChart
+    changeAggregation, createBarChart, createScatterChart, createLineChart,
+    navigateSheetsForwards, navigateSheetsBackwards
 )
-
-# --------------------------------------------------------------------------
-# chatgpt_integration.py
-#
-# A script that:
-#   1. Prompts the user for instructions to ChatGPT.
-#   2. Loads a local dataset (optional).
-#   3. Sends the system prompt + user prompt to ChatGPT.
-#   4. Expects ChatGPT to return ONLY JSON with a "python_code" field.
-#   5. Prints and optionally saves that code.
-#
-# Adjust as needed for your environment.
-# --------------------------------------------------------------------------
 
 openai.api_key = "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"
 MODEL_NAME = "o1-mini-2024-09-12"
 
-def main():
-    # 1. Ask user for a prompt
-    user_prompt = input("Please enter your prompt or instructions for ChatGPT:\n> ")
-
-    # 2. (Optional) Load a local dataset
-    dataset_path = os.path.join("dataHandling", "data_summary.xlsx")  # or a CSV
+def load_dataset_summary():
+    dataset_path = os.path.join("dataHandling", "data_summary.xlsx")
     if os.path.exists(dataset_path):
         try:
             df = pd.read_excel(dataset_path)  # or pd.read_csv(dataset_path)
             print(f"Loaded dataset with shape: {df.shape}")
-            data_summary = df.head().to_json(orient="split")
+            return df.head().to_json(orient="split")
         except Exception as e:
             print(f"Warning: Could not load dataset: {e}")
+            return ""
     else:
         print("Warning: Dataset file not found, continuing without data.")
+        return ""
 
-    # 3. Build the function usage text to include in the system prompt:
+def main():
+    # 1. Ask user for the initial prompt/instructions.
+    initial_user_prompt = input("Please enter your prompt or instructions for ChatGPT:\n> ")
+
+    # 2. (Optional) Load a local dataset and get a data summary.
+    data_summary = load_dataset_summary()
+
+    # 3. Build the function usage text to include in the system prompt.
     function_usage_text = """
 Here are the usage details for each available function: MAKE SURE YOU GET THE VARIABLES EXACTLY RIGHT AND SHOULD BE EAXTLY WRITTEN EXACTLY AS SHONW
 IN THE DATA SUMMARY
@@ -79,29 +72,37 @@ DragToY(variable_name)
 - Key Inputs: variable_name
 
 DragToColor(variable_name, index, axis_name=None)
-- Usage: Drags a variable to the Color mark. 
-- Key Inputs: variable_name, index (0 for "All" if there is 2 or more measures per axis or the index numebr of the vairable you want to actually mark specifcally
-and if there is not 2 measures in any one axis use -1 as ALl doesnt show unless you have two or more measures in one fo the axis), axis_name (if index>0)
+- Usage: Drags a variable to the Color mark. This would allow you to color the measure values shown, such as the bars, based on the ariable dragged.
+Dragging a dimesnions creates distinct colors while dragging a measure creates a continium. 
+- Key Inputs: variable_name, index (0 for "All" if there is 2 or more measures per axis or the index number of the variable you want to actually mark specifically
+and if there is not 2 measures in any one axis use -1 as All doesn't show unless you have two or more measures in one of the axes), axis_name (if index>0)
 
 DragToSize(variable_name, index, axis_name=None)
-- Usage: Drags a variable to the Size mark.
+- Usage: Drags a variable to the Size mark. Makes the size of the mark scale by the measure dragged.
 - Key Inputs: variable_name, index, axis_name
 
 DragToLabel(variable_name, index, axis_name=None)
-- Usage: Drags a variable to the Label mark.
+- Usage: Drags a variable to the Label mark. This allows you to label the graph measure values
+by the variable dragged into the label mark
 - Key Inputs: variable_name, index, axis_name
 
+
+ add color (DragToColor) or labels (DragToLabel) when it provides additional clarity (e.g., highlighting categories or numeric values).
+
+ 
 DragToDetail(variable_name, index, axis_name=None)
 - Usage: Drags a variable to the Detail mark.
 - Key Inputs: variable_name, index, axis_name
 
+for dragging  use the appropriate index argument if multiple measures exist on the same axis.
 dimensionsFilterByFormula(var_to_filter, formula)
-- Usage: Applies a formula-based condition filter on a dimension.
+- Usage: Applies a formula-based condition filter on a dimension and should be for tableau.
 - Key Inputs: var_to_filter, formula
 
 createCalculatedField(field_name, field_formula)
-- Usage: Creates a new calculated field in Tableau.
+- Usage: Creates a new calculated field in Tableau. And make sures its properly formatted for tableau.
 - Key Inputs: field_name, field_formula
+Use createCalculatedField to combine or transform data where needed. If measuring performance over time or summing multiple delay factors, use an appropriate formula.
 
 newSheet()
 - Usage: Opens a fresh sheet.
@@ -119,10 +120,15 @@ changeTitle(new_title)
 filterByTopDimension(variable_name, direction, count, formula)
 - Usage: Applies a Top or Bottom filter to a dimension.
 - Key Inputs: variable_name, direction ("Top"/"Bottom"), count, formula
+ - fomrula should be properly formatting and if its a variable it should be like [variable]
+  If there's a large amount of data, filter it (e.g., filterByTopDimension or dimensionsFilterByFormula) to focus on key elements. Then sort (sortAscending / sortDescending) to make patterns more obvious.
+  Filtering should make sense based on the data summary and data
 
 dualAxis(axis_name, index)
 - Usage: Creates a dual axis by combining the measure at a given index with another measure on the same axis.
 - Key Inputs: axis_name ("xAxis" or "yAxis"), index (1-based measure index)
+dualAxis can combine multiple measures in one chart when it enhances the story.
+make sure you call dual axis when there are at least 2 measures on the axis and call it on the second one
 
 changeAxisMeasure(axis_name, index, measure_type)
 - Usage: Changes the aggregation of a measure (SUM, AVERAGE, etc.)
@@ -130,6 +136,7 @@ changeAxisMeasure(axis_name, index, measure_type)
 
 showTrendLine()
 - Usage: Turns on a trend line in the current chart.
+showTrendLine can reveal underlying patterns in line/scatter plots.
 
 changeAxisMeasureToDiscrete(axis_name, index)
 - Usage: Converts a measure on an axis to discrete or continuous.
@@ -148,8 +155,7 @@ switchGraph(graph_type)
 changeAggregation()
 - Usage: Opens Analysis pane to toggle data aggregation.
 
-
-Try to use these create functions before adding marks, Color, Label, Detail, but do it after filter and calculated feild are called
+Try to use these create functions before adding marks, Color, Label, Detail, but do it after filter and calculated field are called
 
 createBarChart(x_vars, y_vars)
 - Usage: Builds a horizontal bar chart with lists of x-vars and y-vars.
@@ -159,100 +165,147 @@ createScatterChart(x_vars, y_vars)
 
 createLineChart(x_vars, y_vars, date_function="DATETRUNC", date_component="month")
 - Usage: Builds a line chart with a time-based X var, measure Y var, plus optional date truncation.
+
+For instance, bar charts for discrete comparisons, scatter plots for correlations, line charts for trends, etc.
+and you can figure this out based on the variables properities in the datasummary
+
+Navigation Functions:
+navigateSheetsForwards(quantity)
+- Usage: Navigates forwards (Ctrl+Tab) 'quantity' times.
+navigateSheetsBackwards(quantity)
+- Usage: Navigates backwards (Ctrl+Shift+Tab) 'quantity' times.
 """
 
-    # 4. Create the system prompt
-    system_prompt = (
-        "You are a specialized code generator for creating Tableau automation scripts. "
-        "Below are the function definitions and their usage details, which you can call. "
-        "You will be given a user prompt about building a good set of charts or code for data. "
+    # 4. Create the base system prompt.
+    # 4. Create the base system prompt.
+    base_system_prompt = (
+        "You are a specialized code generator for generating Tableau automation scripts. "
+        "Your goal is to produce code that produces visually appealing, meaningful, "
+        "and well-structured Tableau charts based on user instructions. The code must "
+        "use the provided automation functions exactly as specified.\n\n"
+
+        "Keep the following in mind:\n"
+        "1. Use chart types and shelf placements (X, Y, Color, Label, etc.) that highlight data effectively.\n"
+        "2. If relevant, apply sorting or filters (like top N) to focus on key insights.\n"
+        "3. When dealing with date/time data, consider using date functions to create clear timelines and make sure the length of date you put is valid based on the data.\n"
+        "4. Choose appropriate color schemes, detail levels, and mark types (like bars, lines, or points) to avoid clutter and make graphs look better and follow the prompt.\n"
+        "5. Use calculations (createCalculatedField) or trend lines (showTrendLine) as needed to add deeper insights that is relevant to the data.\n"
+        "Exact Syntax: Use the functions verbatim as listed. Make sure to supply them with correct arguments (variable names, indices, etc.) based on the data summary.\n\n"
+
+        "Below are the function definitions and usage details you can call. "
+        "You will be given a user prompt about building charts or code for data. "
         "Your job is to ONLY return JSON with the 'python_code' field containing the code, "
-        "with no additional text or commentary. No other keys or text. "
-        "Just the JSON object like:\n\n"
-        '{\n  "python_code": "THE CODE HERE..."\n}\n\n'
-        "So the user can copy and run it.MAKE SURE THERE IS NO JSON IN THE BEGGINGIN ADN YOU DONT return THE WROD json before the json, No other discussion or commentary.\n\n"
+        "with no additional text or commentary (no other keys or text). For example:\n\n"
+        "{\n  \"python_code\": \"THE CODE HERE...\"\n}\n\n"
+
+        "No extraneous text is allowed—only that JSON. Make sure you do not return JSON at the beginning "
+        "or use the word 'json' prior to the JSON object. No other commentary or explanation.\n\n"
+
         + function_usage_text
-        + "Here is the needed information for the data and the data summary" + 
-        data_summary
+        + "Here is the needed information for the data and the data summary: "
+        + data_summary
     )
 
-    # 5. Combine system prompt with user prompt
-    full_prompt = f"{system_prompt}\n\nUser instructions:\n{user_prompt}"
+    # Inform ChatGPT of the initial state if any code has already been executed.
+    previous_code = ""
+    if os.path.exists("generated_code.py"):
+        with open("generated_code.py", "r", encoding="utf-8") as f:
+            previous_code = f.read()
+    if previous_code:
+        base_system_prompt += "\n\nCurrent cumulative code state (already executed):\n" + previous_code
 
-    # 6. Send to ChatGPT
-    print("Sending prompt to ChatGPT. Please wait...")
-    # response = openai.ChatCompletion.create(
-    #     model="gpt-4",
-    #     messages=[
-    #         {"role": "system", "content": system_prompt},
-    #         {"role": "user", "content": user_prompt}
-    #     ]
-    # )
+    # 5. Combine base system prompt with the initial user prompt.
+    full_initial_prompt = f"{base_system_prompt}\n\nUser instructions:\n{initial_user_prompt}"
 
-    # # 7. Extract the response text
-    # assistant_msg = response["choices"][0]["message"]["content"]
-
-    # response = openai.chat.completions.create(
-    #      model=MODEL_NAME,
-    #      messages=[
-    #         {"role": "system", "content": system_prompt},
-    #         {"role": "user", "content": user_prompt}
-    #      ],
-    #      stream=False
-    # )
-    user_prompt = system_prompt + user_prompt
+    # Send the initial prompt to ChatGPT
+    print("Sending initial prompt to ChatGPT. Please wait...")
     response = openai.chat.completions.create(
          model=MODEL_NAME,
          messages=[
-        #     {"role": "system", "content": system_prompt},
-            {"role": "user", "content": full_prompt}
+             {"role": "user", "content": full_initial_prompt}
          ],
          stream=False
     )
     assistant_msg = response.choices[0].message.content
     assistant_msg = re.sub(r"^```(?:json)?\s*", "", assistant_msg.strip())
     assistant_msg = re.sub(r"\s*```$", "", assistant_msg)
+    tokens = response.usage
 
     print("Raw response from ChatGPT:\n", assistant_msg)
+    print("TOKENS : ", tokens)
 
     try:
         response_json = json.loads(assistant_msg)
         python_code = response_json.get("python_code", None)
         if python_code:
-            print("\n--- Extracted Python Code from ChatGPT ---\n")
+            print("\n--- Extracted Python Code from ChatGPT (Initial) ---\n")
             print(python_code)
-            # Save code to file (optional)
+            # Save code to file
             output_file = "generated_code.py"
             with open(output_file, "w", encoding="utf-8") as f:
                 f.write(python_code)
             print(f"\nPython code saved to {output_file}")
+            # Execute the code (caution!)
+            exec(python_code, globals())
         else:
             print("Did not find 'python_code' in the JSON response.")
     except json.JSONDecodeError as e:
         print(f"JSON parse error: {e}")
         print("Here is the raw output if you need to diagnose:\n", assistant_msg)
 
-    # 8. Parse JSON to get python_code
-    try:
-        response_json = json.loads(assistant_msg)
-        python_code = response_json.get("python_code", None)
-        if python_code:
-            print("\n--- Extracted Python Code from ChatGPT ---\n")
-            print(python_code)
+    # 6. Enter a continuous loop to accept new user instructions.
+    while True:
+        new_instruction = input("\nEnter your next instruction (or type 'quit' to exit):\n> ").strip()
+        if new_instruction.lower() in ["quit", "exit"]:
+            print("Exiting session.")
+            break
 
-            # 9. (Optional) Save code to file
-            output_file = "generated_code.py"
-            with open(output_file, "w", encoding="utf-8") as f:
-                f.write(python_code)
-            print(f"\nPython code saved to {output_file}")
+        # Append the current cumulative code state to the system prompt.
+        previous_code = ""
+        if os.path.exists("generated_code.py"):
+            with open("generated_code.py", "r", encoding="utf-8") as f:
+                previous_code = f.read()
+        current_system_prompt = base_system_prompt
+        if previous_code:
+            current_system_prompt += "\n\nCurrent cumulative code state (already executed):\n" + previous_code
 
-            # 10. (Optional) Execute the code (caution!)
-            exec(python_code, globals())
-        else:
-            print("Did not find 'python_code' in the JSON response.")
-    except json.JSONDecodeError as e:
-        print(f"JSON parse error: {e}")
-        print("Raw response:\n", assistant_msg)
+        # Combine system prompt with the new user instruction.
+        full_prompt = f"{current_system_prompt}\n\nUser instructions:\n{new_instruction}"
+
+        print("Sending prompt to ChatGPT. Please wait...")
+        response = openai.chat.completions.create(
+             model=MODEL_NAME,
+             messages=[
+                 {"role": "user", "content": full_prompt}
+             ],
+             stream=False
+        )
+        assistant_msg = response.choices[0].message.content
+        assistant_msg = re.sub(r"^```(?:json)?\s*", "", assistant_msg.strip())
+        assistant_msg = re.sub(r"\s*```$", "", assistant_msg)
+        tokens = response.usage
+
+        print("Raw response from ChatGPT:\n", assistant_msg)
+        print("TOKENS : ", tokens)
+
+        try:
+            response_json = json.loads(assistant_msg)
+            python_code = response_json.get("python_code", None)
+            if python_code:
+                print("\n--- Extracted Python Code from ChatGPT ---\n")
+                print(python_code)
+                # Save the new cumulative code to file (overwriting previous code)
+                output_file = "generated_code.py"
+                with open(output_file, "w", encoding="utf-8") as f:
+                    f.write(python_code)
+                print(f"\nPython code saved to {output_file}")
+                # Execute the new code (caution!)
+                exec(python_code, globals())
+            else:
+                print("Did not find 'python_code' in the JSON response.")
+        except json.JSONDecodeError as e:
+            print(f"JSON parse error: {e}")
+            print("Here is the raw output if you need to diagnose:\n", assistant_msg)
 
 
 if __name__ == "__main__":

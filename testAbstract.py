@@ -753,13 +753,32 @@ def createLineChart(x_vars, y_vars, date_function="DATETRUNC", date_component="m
     DragToX(x_vars[0])
     DragToY(y_vars[0])
     time.sleep(0.2)
+
+    changeDateType("xAxis", 1, date_function, date_component)
     
     # Switch to continuous line chart view.
     switchGraph("continuous line chart")
     
     # Adjust the X-axis date display.
     # Here, we assume the time variable is the first element on the X axis.
-    changeDateType("xAxis", 1, date_function, date_component)
+
+def navigateSheetsForwards(quantity):
+    """
+    Navigates forwards by simulating the 'Ctrl+Tab' keystroke a given number of times.
+    
+    Parameters:
+      quantity (int): The number of times to move forward.
+    """
+    navigateSheets("forwards", quantity)
+
+def navigateSheetsBackwards(quantity):
+    """
+    Navigates backwards by simulating the 'Ctrl+Shift+Tab' keystroke a given number of times.
+    
+    Parameters:
+      quantity (int): The number of times to move backward.
+    """
+    navigateSheets("backwards", quantity)
 
 
 def main():
@@ -856,10 +875,10 @@ def main():
     # sortDescending()
 
     # value = findPixel("marksTabsMain", "zero", 1, False, True)
-    executeClick("marksTabsMain")
+    # executeClick("marksTabsMain")
     # pyautogui.click(value[0], value[1])
-
-
+    # createLineChart(x_vars=["FL_DATE"], y_vars=["FlightCount"], date_function="DATETRUNC", date_component="month")
+    # changeDateType("xAxis", 1, "DATETRUNC", "month")
 
 if __name__ == "__main__":
     main()

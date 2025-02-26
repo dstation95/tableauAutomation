@@ -1,0 +1,148 @@
+{
+  "main_window": [
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Filter...|731-124-990-148|42_597950_4_-2147470525"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-148-990-157|42_597950_4_-2147470523"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Show Filter|731-157-990-181|42_597950_4_-2147470520"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Show Highlighter|731-181-990-205|42_597950_4_-2147470519"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Apply to Worksheets|731-205-990-229|42_597950_4_-2147470514"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-229-990-238|42_597950_4_-2147470513"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Sort...|731-238-990-264|42_597950_4_-2147470512"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Format...|731-264-990-288|42_597950_4_-2147470509"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Show Header|731-288-990-312|42_597950_4_-2147470508"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Include in Tooltip|731-312-990-336|42_597950_4_-2147470507"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-336-990-345|42_597950_4_-2147470506"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Show Missing Values|731-345-990-369|42_597950_4_-2147470503"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-369-990-378|42_597950_4_-2147470501"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470498"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470496"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470490"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Standard Gregorian|731-378-990-402|42_597950_4_-2147470489"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|ISO-8601 Week-Based|731-402-990-426|42_597950_4_-2147470488"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-426-990-435|42_597950_4_-2147470487"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Year|731-435-990-459|42_597950_4_-2147470486"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Quarter|731-459-990-483|42_597950_4_-2147470485"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Month|731-483-990-507|42_597950_4_-2147470484"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Day|731-507-990-531|42_597950_4_-2147470483"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|More|731-531-990-555|42_597950_4_-2147470482"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-555-990-564|42_597950_4_-2147470481"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Year|731-564-990-588|42_597950_4_-2147470480"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Quarter|731-588-990-612|42_597950_4_-2147470479"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Month|731-612-990-636|42_597950_4_-2147470478"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Week Number|731-636-990-660|42_597950_4_-2147470477"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Day|731-660-990-684|42_597950_4_-2147470476"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|More|731-684-990-708|42_597950_4_-2147470475"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-708-990-717|42_597950_4_-2147470474"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Exact Date|731-717-990-741|42_597950_4_-2147470473"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-741-990-750|42_597950_4_-2147470472"
+    },
+    {
+      "composite": "MenuItem|QWidgetAction|NoAutomationId|Attribute|731-750-990-774|42_597950_4_-2147470471"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Measure|731-774-990-798|42_597950_4_-2147470470"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-798-990-807|42_597950_4_-2147470469"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Discrete|731-807-990-831|42_597950_4_-2147470468"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Continuous|731-831-990-855|42_597950_4_-2147470467"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-855-990-864|42_597950_4_-2147470466"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470464"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470463"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470460"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Edit in Shelf|731-864-990-888|42_597950_4_-2147470459"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|731-888-990-897|42_597950_4_-2147470458"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470448"
+    },
+    {
+      "composite": "Separator|QAction|NoAutomationId|NoName|0-0-0-0|42_597950_4_-2147470444"
+    },
+    {
+      "composite": "MenuItem|QAction|NoAutomationId|Remove|731-897-990-921|42_597950_4_-2147470524"
+    }
+  ]
+}

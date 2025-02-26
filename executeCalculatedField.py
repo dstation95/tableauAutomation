@@ -7,6 +7,8 @@ from pywinauto import Desktop
 import pyautogui
 import openai
 
+from connectScreen import connect_to_tableau
+
 # ============================================================
 # Set OpenAI API credentials and model name
 # ============================================================
@@ -135,20 +137,21 @@ def executeCalculatedField(task_name, field_name, field_formula):
     # ------------------------------------------------------------
     # Connect to the Target Application Window (e.g., Tableau)
     # ------------------------------------------------------------
-    windows = Desktop(backend="uia").windows(title_re=".*Tableau - B.*", visible_only=True)
-    if not windows:
-        print("No Tableau window found.")
-        sys.exit(1)
+    # windows = Desktop(backend="uia").windows(title_re=".*Tableau - B.*", visible_only=True)
+    # if not windows:
+    #     print("No Tableau window found.")
+    #     sys.exit(1)
     
-    def window_area(win):
-        rect = win.rectangle()
-        return (rect.right - rect.left) * (rect.bottom - rect.top)
+    # def window_area(win):
+    #     rect = win.rectangle()
+    #     return (rect.right - rect.left) * (rect.bottom - rect.top)
     
-    target_window = max(windows, key=window_area)
-    print(f"Connected to window: Handle {target_window.handle}, Title: {target_window.window_text()}")
+    # target_window = max(windows, key=window_area)
+    # print(f"Connected to window: Handle {target_window.handle}, Title: {target_window.window_text()}")
     
-    app = Application(backend="uia").connect(handle=target_window.handle)
-    main_window = app.window(handle=target_window.handle)
+    # app = Application(backend="uia").connect(handle=target_window.handle)
+    # main_window = app.window(handle=target_window.handle)
+    main_window = connect_to_tableau()
     
     # ------------------------------------------------------------
     # Capture a New UI Snapshot and Screenshot
