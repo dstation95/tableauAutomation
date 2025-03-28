@@ -13,7 +13,7 @@ from connectScreen import connect_to_tableau
 # ============================================================
 # Set OpenAI API credentials for GPT-4o mini
 # ============================================================
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 MODEL_NAME = "gpt-4o-mini-2024-07-18"
 
 # ============================================================
