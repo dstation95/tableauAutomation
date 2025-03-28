@@ -1,0 +1,1106 @@
+[
+  {
+    "ui_snapshot": {
+      "composite": "Window|TMainWindow|NoAutomationId|Tableau Public - Book5|0-29-1920-1030|42_721450",
+      "children": [
+        {
+          "composite": "[1] TitleBar|UnknownClass|NoAutomationId|NoName|20--6-1920-29|42_721450_3_-2147483647_721450_-2_0",
+          "children": [
+            {
+              "composite": "[1] MenuBar|UnknownClass|MenuBar|System|0-0-28-28|42_721450_3_-2147483646_6424_12452727_0",
+              "children": [
+                {
+                  "composite": "[1] MenuItem|UnknownClass|NoAutomationId|System|0-0-28-28|42_721450_3_-2147483646_4588_12452727_1",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "composite": "[2] Button|UnknownClass|NoAutomationId|Minimize|1740-9-1800-28|42_721450_3_-2147483647_721450_-2_2",
+              "children": []
+            },
+            {
+              "composite": "[3] Button|UnknownClass|NoAutomationId|Restore|1800-9-1859-28|42_721450_3_-2147483647_721450_-2_3",
+              "children": []
+            },
+            {
+              "composite": "[4] Button|UnknownClass|NoAutomationId|Close|1859-9-1929-28|42_721450_3_-2147483647_721450_-2_5",
+              "children": []
+            }
+          ]
+        },
+        {
+          "composite": "[2] Group|CentralWidget|NoAutomationId|NoName|0-105-1920-1030|42_721450_4_-2147483149",
+          "children": [
+            {
+              "composite": "[1] List|SheetSorterWidget|NoAutomationId|NoName|0-0-0-0|42_721450_4_-2147482521",
+              "children": [
+                {
+                  "composite": "[1] ListItem|UnknownClass|NoAutomationId|Sheet 1|0-105-164-286|42_721450_4_-2147482514",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "composite": "[2] Custom|MdiClientWidget|MdiClientWidget|NoName|262-155-1920-967|42_721450_4_-2147483244",
+              "children": [
+                {
+                  "composite": "[1] Group|QWidget|NoAutomationId|NoName|262-155-1920-967|42_721450_4_-2147483245",
+                  "children": [
+                    {
+                      "composite": "[1] Group|WorksheetWidget|Sheet 6_WorksheetWidget|NoName|262-155-1920-967|42_721450_4_-2147475933",
+                      "children": [
+                        {
+                          "composite": "[1] Group|CardManager|NoAutomationId|NoName|262-155-1920-967|42_721450_4_-2147475934",
+                          "children": [
+                            {
+                              "composite": "[1] Group|VisualCanvas|m_visualCanvas|NoName|468-231-1914-961|42_721450_4_-2147475893",
+                              "children": [
+                                {
+                                  "composite": "[1] Group|VisualEdgeManager|m_visualCanvas.m_canvasEdgeManager|NoName|468-231-1914-961|42_721450_4_-2147475894",
+                                  "children": [
+                                    {
+                                      "composite": "[1] Group|VisualWidgetProxy|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy|NoName|475-283-1907-954|42_721450_4_-2147475896",
+                                      "children": [
+                                        {
+                                          "composite": "[1] Group|QWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget|NoName|475-283-1907-954|42_721450_4_-2147475897",
+                                          "children": [
+                                            {
+                                              "composite": "[1] Group|SceneMarginWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneMarginWidget_m_bottomAxes|NoName|557-887-1904-950|42_721450_4_-2147475875",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[2] Group|SceneMarginWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneMarginWidget_m_leftAxes|NoName|479-287-557-888|42_721450_4_-2147475892",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[3] Group|SceneWidget|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneWidget_Sheet6|NoName|557-287-1904-888|42_721450_4_-2147475888",
+                                              "children": [
+                                                {
+                                                  "composite": "[1] Text|QLabel|m_visualCanvas.m_canvasEdgeManager.m_visualWidgetProxy.VisualWidget.SceneWidget_Sheet6.RadialDistanceReadout|NoName|557-287-566-308|42_721450_4_-2147475890",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    },
+                                    {
+                                      "composite": "[2] Custom|VisualCanvasCard|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget|NoName|475-238-1907-283|42_721450_4_-2147475895",
+                                      "children": [
+                                        {
+                                          "composite": "[1] Text|TitleWidget|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget.m_titleWidget|NoName|476-239-1906-282|42_721450_4_-2147475930",
+                                          "children": [
+                                            {
+                                              "composite": "[1] Group|QWidget|m_visualCanvas.m_canvasEdgeManager.VisualCanvasCard_For_m_titleWidget.m_titleWidget.qt_scrollarea_viewport|NoName|476-239-1906-282|42_721450_4_-2147475931",
+                                              "children": []
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "composite": "[2] Group|ShelfWidget|m_pageShelf|NoName|269-191-461-224|42_721450_4_-2147475926",
+                              "children": []
+                            },
+                            {
+                              "composite": "[3] Group|FilterShelfWidget|m_filterShelf|NoName|269-267-461-322|42_721450_4_-2147475922",
+                              "children": []
+                            },
+                            {
+                              "composite": "[4] Group|MarksCardsWidget|MarksCardsWidget|NoName|269-365-461-583|42_721450_4_-2147475907",
+                              "children": [
+                                {
+                                  "composite": "[1] Group|MarksCardScrollArea|MarksCardsWidget.scrollArea|NoName|269-365-461-583|42_721450_4_-2147475908",
+                                  "children": [
+                                    {
+                                      "composite": "[1] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport|NoName|269-365-461-583|42_721450_4_-2147475909",
+                                      "children": [
+                                        {
+                                          "composite": "[1] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent|NoName|269-365-461-583|42_721450_4_-2147475910",
+                                          "children": [
+                                            {
+                                              "composite": "[1] Group|MarksCardTabContents|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents|NoName|269-365-461-583|42_721450_4_-2147475911",
+                                              "children": [
+                                                {
+                                                  "composite": "[1] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.primitiveComboBoxWidget|NoName|276-372-454-403|42_721450_4_-2147476003",
+                                                  "children": [
+                                                    {
+                                                      "composite": "[1] ComboBox|TableauComboBox|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.primitiveComboBoxWidget.primitiveComboBox|NoName|276-372-454-396|42_721450_4_-2147476005",
+                                                      "children": [
+                                                        {
+                                                          "composite": "[1] List|QComboBoxListView|NoAutomationId|NoName|0-0-0-0|42_721450_4_-2147476034",
+                                                          "children": [
+                                                            {
+                                                              "composite": "[1] ListItem|UnknownClass|NoAutomationId|Automatic|277-396-453-422|42_721450_4_-2147475590",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[2] ListItem|UnknownClass|NoAutomationId|Bar|277-422-453-448|42_721450_4_-2147475589",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[3] ListItem|UnknownClass|NoAutomationId|Line|277-448-453-474|42_721450_4_-2147475588",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[4] ListItem|UnknownClass|NoAutomationId|Area|277-474-453-500|42_721450_4_-2147475587",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[5] ListItem|UnknownClass|NoAutomationId|Square|277-500-453-526|42_721450_4_-2147475586",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[6] ListItem|UnknownClass|NoAutomationId|Circle|277-526-453-552|42_721450_4_-2147475585",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[7] ListItem|UnknownClass|NoAutomationId|Shape|277-552-453-578|42_721450_4_-2147475584",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[8] ListItem|UnknownClass|NoAutomationId|Text|277-578-453-604|42_721450_4_-2147475583",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[9] ListItem|UnknownClass|NoAutomationId|Map|277-604-453-630|42_721450_4_-2147475582",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[10] ListItem|UnknownClass|NoAutomationId|Pie|277-630-453-656|42_721450_4_-2147475581",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[11] ListItem|UnknownClass|NoAutomationId|Gantt Bar|277-656-453-682|42_721450_4_-2147475580",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[12] ListItem|UnknownClass|NoAutomationId|Polygon|277-682-453-708|42_721450_4_-2147475579",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[13] ListItem|UnknownClass|NoAutomationId|Density|277-708-453-734|42_721450_4_-2147475578",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[14] ListItem|UnknownClass|NoAutomationId|NoName|277-734-453-744|42_721450_4_-2147475577",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[15] ListItem|UnknownClass|NoAutomationId|Viz Extensions|277-744-453-770|42_721450_4_-2147475576",
+                                                              "children": []
+                                                            },
+                                                            {
+                                                              "composite": "[16] ListItem|UnknownClass|NoAutomationId|Add Extension|277-770-453-801|42_721450_4_-2147475575",
+                                                              "children": []
+                                                            }
+                                                          ]
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "composite": "[2] Group|QWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget|NoName|276-403-454-514|42_721450_4_-2147475916",
+                                                  "children": [
+                                                    {
+                                                      "composite": "[1] Group|DropTargetWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.bottomCenterDropTarget|NoName|335-462-395-514|42_721450_4_-2147475921",
+                                                      "children": [
+                                                        {
+                                                          "composite": "[1] Button|TableauButton|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.bottomCenterDropTarget.DropTargetWidgetButton_Tooltip|Tooltip|337-462-393-514|42_721450_4_-2147475942",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "composite": "[2] Group|DropTargetWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.topCenterDropTarget|NoName|335-403-395-462|42_721450_4_-2147475920",
+                                                      "children": [
+                                                        {
+                                                          "composite": "[1] Button|TableauButton|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.topCenterDropTarget.DropTargetWidgetButton_Size|Size|337-403-393-455|42_721450_4_-2147475965",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "composite": "[3] Group|DropTargetWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.topRightDropTarget|NoName|395-403-454-462|42_721450_4_-2147475919",
+                                                      "children": [
+                                                        {
+                                                          "composite": "[1] Button|TableauButton|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.topRightDropTarget.DropTargetWidgetButton_Text|Label|400-403-454-455|42_721450_4_-2147475944",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "composite": "[4] Group|DropTargetWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.topLeftDropTarget|NoName|276-403-335-462|42_721450_4_-2147475918",
+                                                      "children": [
+                                                        {
+                                                          "composite": "[1] Button|TableauButton|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.topLeftDropTarget.DropTargetWidgetButton_Color|Color|276-403-330-455|42_721450_4_-2147475978",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    },
+                                                    {
+                                                      "composite": "[5] Group|DropTargetWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.bottomLeftDropTarget|NoName|276-462-335-514|42_721450_4_-2147475917",
+                                                      "children": [
+                                                        {
+                                                          "composite": "[1] Button|TableauButton|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.dropTargetContainerWidget.bottomLeftDropTarget.DropTargetWidgetButton_LOD|Detail|276-462-330-514|42_721450_4_-2147475943",
+                                                          "children": []
+                                                        }
+                                                      ]
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "composite": "[3] Group|ShelfWidget|MarksCardsWidget.scrollArea.qt_scrollarea_viewport.scrollAreaContent.defaultMarksCardTabContents.m_encodingsShelf|NoName|276-528-454-582|42_721450_4_-2147475912",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "composite": "[5] Group|ShelfWidget|m_xAxisShelf|NoName|628-156-1913-186|42_721450_4_-2147475903",
+                              "children": []
+                            },
+                            {
+                              "composite": "[6] Group|ShelfWidget|m_yAxisShelf|NoName|628-194-1913-224|42_721450_4_-2147475899",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "composite": "[3] ToolBar|ToolbarWidget|NoAutomationId|NoName|0-105-1920-155|42_721450_4_-2147483188",
+              "children": [
+                {
+                  "composite": "[1] Group|QWidget|NoAutomationId|NoName|0-105-8-155|42_721450_4_-2147483243",
+                  "children": []
+                },
+                {
+                  "composite": "[2] Button|TableauCommandButton|AffordanceId_ToggleStartPage|NoName|10-111-47-148|42_721450_4_-2147483241",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|10-111-47-148|42_721450_4_-2147483242",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[3] Image|QLabel|NoAutomationId|NoName|49-105-63-155|42_721450_4_-2147483240",
+                  "children": []
+                },
+                {
+                  "composite": "[4] Button|TableauCommandButton|AffordanceId_Undo|NoName|65-111-102-148|42_721450_4_-2147483238",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|65-111-102-148|42_721450_4_-2147483239",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[5] Button|TableauCommandButton|AffordanceId_Redo|NoName|104-111-141-148|42_721450_4_-2147483236",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|104-111-141-148|42_721450_4_-2147483237",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[6] CheckBox|TableauCommandButton|AffordanceId_ReplayAnimation|NoName|143-111-189-148|42_721450_4_-2147483233",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|143-111-176-148|42_721450_4_-2147483235",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Image|QLabel|AffordanceId_ReplayAnimation.drop-down-arrow|NoName|178-111-189-148|42_721450_4_-2147483234",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[7] Button|TableauCommandButton|AffordanceId_File_SavePublic|NoName|191-111-228-148|42_721450_4_-2147483231",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|191-111-228-148|42_721450_4_-2147483232",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[8] Button|TableauCommandButton|AffordanceId_ToggleConnectPane|NoName|230-111-267-148|42_721450_4_-2147483229",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|230-111-267-148|42_721450_4_-2147483230",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[9] Image|QLabel|NoAutomationId|NoName|269-105-283-155|42_721450_4_-2147483228",
+                  "children": []
+                },
+                {
+                  "composite": "[10] Button|TableauCommandButton|AffordanceId_Worksheet_NewWorksheet|NoName|285-111-331-148|42_721450_4_-2147483225",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|285-111-318-148|42_721450_4_-2147483227",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Image|QLabel|AffordanceId_Worksheet_NewWorksheet.drop-down-arrow|NoName|320-111-331-148|42_721450_4_-2147483226",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[11] Button|TableauCommandButton|AffordanceId_Sheet_Duplicate|NoName|333-111-370-148|42_721450_4_-2147483223",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|333-111-370-148|42_721450_4_-2147483224",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[12] Button|TableauCommandButton|AffordanceId_Sheet_Clear|NoName|372-111-418-148|42_721450_4_-2147483220",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|372-111-405-148|42_721450_4_-2147483222",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Image|QLabel|AffordanceId_Sheet_Clear.drop-down-arrow|NoName|407-111-418-148|42_721450_4_-2147483221",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[13] Image|QLabel|NoAutomationId|NoName|420-105-434-155|42_721450_4_-2147483219",
+                  "children": []
+                },
+                {
+                  "composite": "[14] Button|TableauCommandButton|AffordanceId_Analysis_SwapRowsAndColumns|NoName|436-111-473-148|42_721450_4_-2147483217",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|436-111-473-148|42_721450_4_-2147483218",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[15] Button|TableauCommandButton|AffordanceId_Quicksort_Ascending|NoName|475-111-512-148|42_721450_4_-2147483215",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|475-111-512-148|42_721450_4_-2147483216",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[16] Button|TableauCommandButton|AffordanceId_Quicksort_Descending|NoName|514-111-551-148|42_721450_4_-2147483213",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|514-111-551-148|42_721450_4_-2147483214",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[17] Image|QLabel|NoAutomationId|NoName|553-105-567-155|42_721450_4_-2147483212",
+                  "children": []
+                },
+                {
+                  "composite": "[18] Button|TableauCommandButton|AffordanceId_Brushing_On|NoName|569-111-616-148|42_721450_4_-2147483209",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|569-111-606-148|42_721450_4_-2147483211",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Image|QLabel|AffordanceId_Brushing_On.drop-down-arrow|NoName|606-111-616-148|42_721450_4_-2147483210",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[19] Button|TableauCommandButton|AffordanceId_TB_UngroupSelection|NoName|618-111-665-148|42_721450_4_-2147483206",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|618-111-655-148|42_721450_4_-2147483208",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Image|QLabel|AffordanceId_TB_UngroupSelection.drop-down-arrow|NoName|655-111-665-148|42_721450_4_-2147483207",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[20] CheckBox|TableauCommandButton|AffordanceId_Analysis_ShowMarkLabels|NoName|667-111-704-148|42_721450_4_-2147483204",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|667-111-704-148|42_721450_4_-2147483205",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[21] CheckBox|TableauCommandButton|AffordanceId_ClearAxisRanges|NoName|706-111-743-148|42_721450_4_-2147483202",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|706-111-743-148|42_721450_4_-2147483203",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[22] Group|QWidget|NoAutomationId|NoName|745-105-751-155|42_721450_4_-2147483201",
+                  "children": []
+                },
+                {
+                  "composite": "[23] ComboBox|ToolbarZoomComboBox|NoAutomationId|NoName|753-116-880-144|42_721450_4_-2147483267",
+                  "children": [
+                    {
+                      "composite": "[1] List|QComboBoxListView|NoAutomationId|NoName|0-0-0-0|42_721450_4_-2147483261",
+                      "children": [
+                        {
+                          "composite": "[1] ListItem|UnknownClass|NoAutomationId|Standard|1-1-89-23|42_721450_4_-2147480592",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] ListItem|UnknownClass|NoAutomationId|Fit Width|1-23-89-45|42_721450_4_-2147480522",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "composite": "[24] Group|QWidget|NoAutomationId|NoName|882-105-888-155|42_721450_4_-2147483200",
+                  "children": []
+                },
+                {
+                  "composite": "[25] Image|QLabel|NoAutomationId|NoName|890-105-904-155|42_721450_4_-2147483199",
+                  "children": []
+                },
+                {
+                  "composite": "[26] Button|TableauCommandButton|AffordanceId_CardOptions|NoName|906-111-953-148|42_721450_4_-2147483196",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|906-111-943-148|42_721450_4_-2147483198",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Image|QLabel|AffordanceId_CardOptions.drop-down-arrow|NoName|943-111-953-148|42_721450_4_-2147483197",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[27] CheckBox|TableauCommandButton|AffordanceId_Window_PresentationMode|NoName|955-111-992-148|42_721450_4_-2147483194",
+                  "children": [
+                    {
+                      "composite": "[1] Image|QLabel|NoAutomationId|NoName|955-111-992-148|42_721450_4_-2147483195",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[28] Image|QLabel|NoAutomationId|NoName|994-105-1008-155|42_721450_4_-2147483193",
+                  "children": []
+                },
+                {
+                  "composite": "[29] Group|QWidget|NoAutomationId|NoName|1010-105-1784-155|42_721450_4_-2147483192",
+                  "children": []
+                },
+                {
+                  "composite": "[30] Button|ShowMeControlButton|NoAutomationId|NoName|1786-111-1913-148|42_721450_4_-2147483190",
+                  "children": [
+                    {
+                      "composite": "[1] Text|QLabel|m_text|Show Me|1819-118-1891-140|42_721450_4_-2147483259",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Image|QLabel|m_icon|NoName|1796-119-1816-139|42_721450_4_-2147483191",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "composite": "[31] Group|QWidget|NoAutomationId|NoName|1915-105-1920-155|42_721450_4_-2147483189",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "composite": "[4] Group|StatusBarWidget|m_statusBar|NoName|0-1004-1920-1030|42_721450_4_-2147483161",
+              "children": [
+                {
+                  "composite": "[1] Custom|QFrame|NoAutomationId|NoName|0-1004-1920-1005|42_721450_4_-2147483187",
+                  "children": []
+                },
+                {
+                  "composite": "[2] Group|QWidget|NoAutomationId|NoName|0-1005-1920-1030|42_721450_4_-2147483162",
+                  "children": [
+                    {
+                      "composite": "[1] Group|StatusBarPaneWidget|NoAutomationId|NoName|0-1005-1498-1030|42_721450_4_-2147483186",
+                      "children": [
+                        {
+                          "composite": "[1] Text|QLabel|m_statusBarStatsPaneLabel|48 marks       1 row by 1 column       SUM(Sales): 2,297,201|3-1005-1498-1030|42_721450_4_-2147482498",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[2] Custom|QFrame|NoAutomationId|NoName|1501-1005-1502-1030|42_721450_4_-2147483185",
+                      "children": []
+                    },
+                    {
+                      "composite": "[3] Group|IdentityStatusBarPaneWidget|NoAutomationId|NoName|1505-1005-1655-1030|42_721450_4_-2147483180",
+                      "children": [
+                        {
+                          "composite": "[1] Text|QLabel|NoAutomationId|NoName|1505-1005-1526-1030|42_721450_4_-2147483184",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] Group|QWidget|IdentityWidget|NoName|1529-1005-1655-1030|42_721450_4_-2147483181",
+                          "children": [
+                            {
+                              "composite": "[1] Text|QLabel|IdentityWidget.m_icon|NoName|1529-1009-1546-1026|42_721450_4_-2147483183",
+                              "children": []
+                            },
+                            {
+                              "composite": "[2] Text|TableauLabel|IdentityWidget.m_user|NoName|1552-1005-1655-1030|42_721450_4_-2147483182",
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[4] Custom|QFrame|NoAutomationId|NoName|1658-1005-1659-1030|42_721450_4_-2147483179",
+                      "children": []
+                    },
+                    {
+                      "composite": "[5] Group|StatusBarPaneWidget|NoAutomationId|NoName|1662-1005-1687-1030|42_721450_4_-2147483176",
+                      "children": [
+                        {
+                          "composite": "[1] Text|QLabel|NoAutomationId|NoName|1676-1005-1683-1030|42_721450_4_-2147483178",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] Text|QLabel|NoAutomationId|NoName|1666-1005-1673-1030|42_721450_4_-2147483177",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[6] Custom|QFrame|NoAutomationId|NoName|1690-1005-1691-1030|42_721450_4_-2147483175",
+                      "children": []
+                    },
+                    {
+                      "composite": "[7] Group|StatusBarPaneWidget|NoAutomationId|NoName|1694-1005-1719-1030|42_721450_4_-2147483172",
+                      "children": [
+                        {
+                          "composite": "[1] Text|QLabel|NoAutomationId|NoName|1708-1005-1715-1030|42_721450_4_-2147483174",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] Text|QLabel|NoAutomationId|NoName|1698-1005-1705-1030|42_721450_4_-2147483173",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[8] Custom|QFrame|NoAutomationId|NoName|1722-1005-1723-1030|42_721450_4_-2147483171",
+                      "children": []
+                    },
+                    {
+                      "composite": "[9] Group|StatusBarPaneWidget|NoAutomationId|NoName|1726-1005-1776-1030|42_721450_4_-2147483168",
+                      "children": [
+                        {
+                          "composite": "[1] Text|QLabel|NoAutomationId|NoName|1753-1005-1760-1030|42_721450_4_-2147483170",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] Text|QLabel|NoAutomationId|NoName|1743-1005-1750-1030|42_721450_4_-2147483169",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[10] Custom|QFrame|NoAutomationId|NoName|1779-1005-1780-1030|42_721450_4_-2147483167",
+                      "children": []
+                    },
+                    {
+                      "composite": "[11] Group|QWidget|NoAutomationId|NoName|1783-1005-1847-1030|42_721450_4_-2147483166",
+                      "children": [
+                        {
+                          "composite": "[1] Group|StatusBarButton|AffordanceId_SheetScroll_First|NoName|1783-1009-1799-1025|42_721450_4_-2147483246",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] Group|StatusBarButton|AffordanceId_SheetScroll_Prev|NoName|1799-1009-1815-1025|42_721450_4_-2147483250",
+                          "children": []
+                        },
+                        {
+                          "composite": "[3] Group|StatusBarButton|AffordanceId_SheetScroll_Next|NoName|1815-1009-1831-1025|42_721450_4_-2147483249",
+                          "children": []
+                        },
+                        {
+                          "composite": "[4] Group|StatusBarButton|AffordanceId_SheetScroll_Last|NoName|1831-1009-1847-1025|42_721450_4_-2147483248",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[12] Custom|QFrame|NoAutomationId|NoName|1850-1005-1851-1030|42_721450_4_-2147483165",
+                      "children": []
+                    },
+                    {
+                      "composite": "[13] Group|QWidget|NoAutomationId|NoName|1857-1005-1917-1030|42_721450_4_-2147483163",
+                      "children": [
+                        {
+                          "composite": "[1] Group|StatusBarButton|AffordanceId_Sheets_SheetSorter|NoName|1857-1009-1873-1025|42_721450_4_-2147483247",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] Group|StatusBarButton|AffordanceId_Sheets_Filmstrip|NoName|1879-1009-1895-1025|42_721450_4_-2147483164",
+                          "children": []
+                        },
+                        {
+                          "composite": "[3] Group|StatusBarButton|AffordanceId_Sheets_SheetTabs|NoName|1901-1009-1917-1025|42_721450_4_-2147483251",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "composite": "[5] Group|ResizeHandleWidget|m_primaryResizeHandleWidget|NoName|262-155-269-967|42_721450_4_-2147483109",
+              "children": []
+            },
+            {
+              "composite": "[6] Group|SideBarWidget|NoAutomationId|NoName|0-155-262-967|42_721450_4_-2147483111",
+              "children": [
+                {
+                  "composite": "[1] Group|SidePaneWithHeader|NoAutomationId|NoName|0-155-261-967|42_721450_4_-2147483112",
+                  "children": [
+                    {
+                      "composite": "[1] Group|SidePaneHeader|NoAutomationId|NoName|0-155-261-188|42_721450_4_-2147483133",
+                      "children": [
+                        {
+                          "composite": "[1] Group|CommandButtonBar|NoAutomationId|NoName|0-155-241-188|42_721450_4_-2147483110",
+                          "children": [
+                            {
+                              "composite": "[1] CheckBox|CommandButton|Data|Data|0-155-98-188|42_721450_4_-2147483585",
+                              "children": []
+                            },
+                            {
+                              "composite": "[2] CheckBox|CommandButton|Analytics|Analytics|98-155-241-188|42_721450_4_-2147483584",
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "composite": "[2] Group|SimpleButtonWidget|sideBarCollapseButton|NoName|243-163-259-179|42_721450_4_-2147483134",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[2] Group|AbstractSidePaneWidget|WorksheetSidePaneWidget|NoName|0-188-261-967|42_721450_4_-2147483113",
+                      "children": [
+                        {
+                          "composite": "[1] Custom|QStackedWidget|WorksheetSidePaneWidget.m_stackWidget|NoName|0-188-261-967|42_721450_4_-2147483114",
+                          "children": [
+                            {
+                              "composite": "[1] Group|QWidget|WorksheetSidePaneWidget.m_stackWidget.m_dataTab|NoName|0-188-261-967|42_721450_4_-2147483115",
+                              "children": [
+                                {
+                                  "composite": "[1] Group|SchemaViewerWidget|NoAutomationId|NoName|0-188-261-967|42_721450_4_-2147483116",
+                                  "children": [
+                                    {
+                                      "composite": "[1] Custom|SVSplitter|NoAutomationId|NoName|0-188-261-967|42_721450_4_-2147483117",
+                                      "children": [
+                                        {
+                                          "composite": "[1] Tree|SVDropTargetTreeWidget|m_parametersTree|NoName|0-0-0-0|42_721450_4_-2147480603",
+                                          "children": []
+                                        },
+                                        {
+                                          "composite": "[2] Tree|SVDropTargetTreeWidget|m_groupsTree|NoName|0-0-0-0|42_721450_4_-2147480593",
+                                          "children": []
+                                        },
+                                        {
+                                          "composite": "[3] Tree|SVDropTargetTreeWidget|m_measuresTree|NoName|0-0-0-0|42_721450_4_-2147480595",
+                                          "children": []
+                                        },
+                                        {
+                                          "composite": "[4] Tree|SVDropTargetTreeWidget|m_dimensionsTree|NoName|0-0-0-0|42_721450_4_-2147480597",
+                                          "children": []
+                                        },
+                                        {
+                                          "composite": "[5] Tree|SVDropTargetTreeWidget|m_commonTree|NoName|0-297-261-967|42_721450_4_-2147483129",
+                                          "children": [
+                                            {
+                                              "composite": "[1] TreeItem|UnknownClass|NoAutomationId|Category|18-297-240-323|42_721450_4_-2147476684",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[2] TreeItem|UnknownClass|NoAutomationId|City|18-323-240-349|42_721450_4_-2147475827",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[3] TreeItem|UnknownClass|NoAutomationId|Country|18-349-240-375|42_721450_4_-2147475826",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[4] TreeItem|UnknownClass|NoAutomationId|Customer ID|18-375-240-401|42_721450_4_-2147475825",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[5] TreeItem|UnknownClass|NoAutomationId|Customer Name|18-401-240-427|42_721450_4_-2147475824",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[6] TreeItem|UnknownClass|NoAutomationId|Order Date|18-427-240-453|42_721450_4_-2147476605",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[7] TreeItem|UnknownClass|NoAutomationId|Order ID|18-453-240-479|42_721450_4_-2147476606",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[8] TreeItem|UnknownClass|NoAutomationId|Postal Code|18-479-240-505|42_721450_4_-2147475823",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[9] TreeItem|UnknownClass|NoAutomationId|Product ID|18-505-240-531|42_721450_4_-2147475822",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[10] TreeItem|UnknownClass|NoAutomationId|Product Name|18-531-240-557|42_721450_4_-2147475821",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[11] TreeItem|UnknownClass|NoAutomationId|Region|18-557-240-583|42_721450_4_-2147475820",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[12] TreeItem|UnknownClass|NoAutomationId|Row ID|18-583-240-609|42_721450_4_-2147476692",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[13] TreeItem|UnknownClass|NoAutomationId|Segment|18-609-240-635|42_721450_4_-2147475819",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[14] TreeItem|UnknownClass|NoAutomationId|Ship Date|18-635-240-661|42_721450_4_-2147475818",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[15] TreeItem|UnknownClass|NoAutomationId|Ship Mode|18-661-240-687|42_721450_4_-2147475817",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[16] TreeItem|UnknownClass|NoAutomationId|State|18-687-240-713|42_721450_4_-2147476694",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[17] TreeItem|UnknownClass|NoAutomationId|Sub-Category|18-713-240-739|42_721450_4_-2147475816",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[18] TreeItem|UnknownClass|NoAutomationId|Measure Names|18-739-240-765|42_721450_4_-2147476679",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[19] TreeItem|UnknownClass|NoAutomationId|NoName|18-765-240-767|42_721450_4_-2147475815",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[20] TreeItem|UnknownClass|NoAutomationId|Discount|18-767-240-793|42_721450_4_-2147475814",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[21] TreeItem|UnknownClass|NoAutomationId|Profit|18-793-240-819|42_721450_4_-2147476683",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[22] TreeItem|UnknownClass|NoAutomationId|Profit per Sale|18-819-240-845|42_721450_4_-2147475813",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[23] TreeItem|UnknownClass|NoAutomationId|Quantity|18-845-240-871|42_721450_4_-2147476693",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[24] TreeItem|UnknownClass|NoAutomationId|Sales|18-871-240-897|42_721450_4_-2147476336",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[25] TreeItem|UnknownClass|NoAutomationId|Book3.csv (Count)|18-897-240-923|42_721450_4_-2147475812",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[26] TreeItem|UnknownClass|NoAutomationId|Latitude (generated)|18-923-240-949|42_721450_4_-2147475811",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[27] TreeItem|UnknownClass|NoAutomationId|Longitude (generated)|18-949-240-975|42_721450_4_-2147475810",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "composite": "[6] Group|QWidget|NoAutomationId|NoName|0-231-261-265|42_721450_4_-2147482695",
+                                          "children": [
+                                            {
+                                              "composite": "[1] Group|QWidget|NoAutomationId|NoName|10-234-207-262|42_721450_4_-2147482699",
+                                              "children": [
+                                                {
+                                                  "composite": "[1] Edit|SchemaViewerSearchWidget|NoAutomationId|NoName|10-234-188-262|42_721450_4_-2147483586",
+                                                  "children": [
+                                                    {
+                                                      "composite": "[1] Button|LineEditButton|clearSchemaViewerSearchButton|NoName|167-238-186-257|42_721450_4_-2147483605",
+                                                      "children": []
+                                                    }
+                                                  ]
+                                                },
+                                                {
+                                                  "composite": "[2] Group|SimpleButtonWidget|m_searchFilterBtn|NoName|191-240-207-256|42_721450_4_-2147482700",
+                                                  "children": []
+                                                }
+                                              ]
+                                            },
+                                            {
+                                              "composite": "[2] Custom|QFrame|NoAutomationId|NoName|210-237-213-259|42_721450_4_-2147482698",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[3] Group|SimpleButtonWidget|m_showDataBtn|NoName|216-240-232-256|42_721450_4_-2147482697",
+                                              "children": []
+                                            },
+                                            {
+                                              "composite": "[4] Group|SimpleButtonWidget|m_menuBtn|NoName|235-240-251-256|42_721450_4_-2147482696",
+                                              "children": []
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "composite": "[7] Custom|DataSourceListWidget|DataSourceListWidget|NoName|0-188-261-225|42_721450_4_-2147483127",
+                                          "children": [
+                                            {
+                                              "composite": "[1] List|QListView|DataSourceListWidget.dataSources_listView|NoName|0-193-261-219|42_721450_4_-2147482702",
+                                              "children": [
+                                                {
+                                                  "composite": "[1] ListItem|UnknownClass|NoAutomationId|Book3|0-193-261-218|42_721450_4_-2147475941",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        },
+                                        {
+                                          "composite": "[8] Thumb|QSplitterHandle|qt_splithandle_|NoName|0-225-261-231|42_721450_4_-2147483126",
+                                          "children": []
+                                        },
+                                        {
+                                          "composite": "[9] Thumb|QSplitterHandle|qt_splithandle_m_commonTree|NoName|0-265-261-297|42_721450_4_-2147483124",
+                                          "children": [
+                                            {
+                                              "composite": "[1] Group|SidePaneHeader|NoAutomationId|NoName|0-265-261-297|42_721450_4_-2147483125",
+                                              "children": [
+                                                {
+                                                  "composite": "[1] Text|TableauLabel|NoAutomationId|Tables|2-267-257-295|42_721450_4_-2147483592",
+                                                  "children": []
+                                                }
+                                              ]
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "composite": "[7] Group|QWidget|NoAutomationId|NoName|0-967-1920-1004|42_721450_4_-2147483150",
+              "children": [
+                {
+                  "composite": "[1] Group|SheetTabsWidget|SheetTabsWidget|NoName|0-967-1920-1004|42_721450_4_-2147483151",
+                  "children": [
+                    {
+                      "composite": "[1] Group|StaticTabWidget|SheetTabsWidget.m_dsTab|NoName|0-968-162-1004|42_721450_4_-2147483160",
+                      "children": []
+                    },
+                    {
+                      "composite": "[2] Group|QWidget|SheetTabsWidget.dividerLine_1|NoName|162-968-163-1004|42_721450_4_-2147483159",
+                      "children": []
+                    },
+                    {
+                      "composite": "[3] List|SheetListWidget|SheetTabsWidget.SheetListWidget|NoName|163-968-675-1004|42_721450_4_-2147483157",
+                      "children": [
+                        {
+                          "composite": "[1] ListItem|UnknownClass|NoAutomationId|NoName|163-968-234-1004|42_721450_4_-2147482493",
+                          "children": []
+                        },
+                        {
+                          "composite": "[2] ListItem|UnknownClass|NoAutomationId|NoName|234-968-305-1004|42_721450_4_-2147480247",
+                          "children": []
+                        },
+                        {
+                          "composite": "[3] ListItem|UnknownClass|NoAutomationId|NoName|305-968-376-1004|42_721450_4_-2147479609",
+                          "children": []
+                        },
+                        {
+                          "composite": "[4] ListItem|UnknownClass|NoAutomationId|NoName|376-968-447-1004|42_721450_4_-2147478867",
+                          "children": []
+                        },
+                        {
+                          "composite": "[5] ListItem|UnknownClass|NoAutomationId|NoName|447-968-518-1004|42_721450_4_-2147478114",
+                          "children": []
+                        },
+                        {
+                          "composite": "[6] ListItem|UnknownClass|NoAutomationId|NoName|518-968-604-1004|42_721450_4_-2147477413",
+                          "children": []
+                        },
+                        {
+                          "composite": "[7] ListItem|UnknownClass|NoAutomationId|NoName|604-968-675-1004|42_721450_4_-2147475932",
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "composite": "[4] Group|QWidget|SheetTabsWidget.dividerLine_2|NoName|675-968-676-1004|42_721450_4_-2147483156",
+                      "children": []
+                    },
+                    {
+                      "composite": "[5] Group|StaticTabWidget|SheetTabsWidget.m_newSheetTab|NoName|676-968-708-1004|42_721450_4_-2147483155",
+                      "children": []
+                    },
+                    {
+                      "composite": "[6] Group|StaticTabWidget|SheetTabsWidget.m_newDashboardTab|NoName|708-968-740-1004|42_721450_4_-2147483154",
+                      "children": []
+                    },
+                    {
+                      "composite": "[7] Group|StaticTabWidget|SheetTabsWidget.m_newStoryboardTab|NoName|740-968-772-1004|42_721450_4_-2147483153",
+                      "children": []
+                    },
+                    {
+                      "composite": "[8] Group|QWidget|NoAutomationId|NoName|0-967-1920-1004|42_721450_4_-2147483152",
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "composite": "[3] ToolBar|QToolBar|NoAutomationId|NoName|0-55-1920-105|42_721450_4_-2147483146",
+          "children": [
+            {
+              "composite": "[1] Group|FreemiumBannerWidget|FreemiumBannerWidget|NoName|0-55-1920-105|42_721450_4_-2147483147",
+              "children": [
+                {
+                  "composite": "[1] Image|QLabel|FreemiumBannerWidget.m_svgicon|NoName|11-66-47-94|42_721450_4_-2147483148",
+                  "children": []
+                },
+                {
+                  "composite": "[2] Text|QLabel|FreemiumBannerWidget.m_titleText|Tableau Desktop Public Edition|54-66-296-94|42_721450_4_-2147483258",
+                  "children": []
+                },
+                {
+                  "composite": "[3] Text|TableauClickableLabel|FreemiumBannerWidget.m_bannerButton|Buy Tableau|1765-66-1862-94|42_721450_4_-2147483257",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "composite": "[4] MenuBar|QMenuBar|mainMenu|NoName|0-29-1920-55|42_721450_4_-2147483254",
+          "children": [
+            {
+              "composite": "[1] MenuItem|QAction|NoAutomationId|File|0-29-39-54|42_721450_4_-2147481346",
+              "children": []
+            },
+            {
+              "composite": "[2] MenuItem|QAction|NoAutomationId|Data|39-29-87-54|42_721450_4_-2147481345",
+              "children": []
+            },
+            {
+              "composite": "[3] MenuItem|QAction|NoAutomationId|Worksheet|87-29-172-54|42_721450_4_-2147481344",
+              "children": []
+            },
+            {
+              "composite": "[4] MenuItem|QAction|NoAutomationId|Dashboard|172-29-261-54|42_721450_4_-2147481343",
+              "children": []
+            },
+            {
+              "composite": "[5] MenuItem|QAction|NoAutomationId|Story|261-29-311-54|42_721450_4_-2147481342",
+              "children": []
+            },
+            {
+              "composite": "[6] MenuItem|QAction|NoAutomationId|Analysis|311-29-380-54|42_721450_4_-2147481341",
+              "children": []
+            },
+            {
+              "composite": "[7] MenuItem|QAction|NoAutomationId|Map|380-29-426-54|42_721450_4_-2147481340",
+              "children": []
+            },
+            {
+              "composite": "[8] MenuItem|QAction|NoAutomationId|Format|426-29-489-54|42_721450_4_-2147481339",
+              "children": []
+            },
+            {
+              "composite": "[9] MenuItem|QAction|NoAutomationId|Server|489-29-546-54|42_721450_4_-2147481338",
+              "children": []
+            },
+            {
+              "composite": "[10] MenuItem|QAction|NoAutomationId|Window|546-29-617-54|42_721450_4_-2147481337",
+              "children": []
+            },
+            {
+              "composite": "[11] MenuItem|QAction|NoAutomationId|Help|617-29-665-54|42_721450_4_-2147481336",
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    "prompt": "marksDropdown"
+  }
+]

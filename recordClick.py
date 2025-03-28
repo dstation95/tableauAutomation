@@ -48,7 +48,7 @@ def append_to_json_file(filename, data):
 # Step 2: Connect to the Application Window (e.g., Tableau)
 # ------------------------------------------------------------
 # Adjust the title regex to match your target application (e.g., Tableau)
-windows = Desktop(backend="uia").windows(title_re=".*Tableau - B.*", visible_only=True)
+windows = Desktop(backend="uia").windows(title_re=".*Tableau Public - B.*", visible_only=True)
 if not windows:
     print("No Tableau window found.")
     sys.exit(1)
@@ -126,19 +126,19 @@ append_to_json_file(input_filename, training_input)
 # ------------------------------------------------------------
 # Step 4: Wait for the Backtick Key Press
 # ------------------------------------------------------------
-print("Waiting for you to press the backtick key (`) to start recording the click...")
+print("Waiting for you to press the backtick key (`) to start recording the click...!")
 
 def on_key_press(key):
     try:
-        if key.char == '`':
+        if hasattr(key, 'char') and key.char == '`':
             print("Backtick key pressed. Now waiting for your next mouse click...")
-            # Stop the keyboard listener.
             return False
-    except AttributeError:
-        # Some keys (like special function keys) don't have a char attribute.
-        pass
+    except Exception as e:
+        print("Error in on_key_press:", e)
+        return False
 
-with keyboard.Listener(on_press=on_key_press) as k_listener:
+
+with keyboard.Listener(on_press=on_key_press, suppress=True) as k_listener:
     k_listener.join()
 
 # ------------------------------------------------------------
@@ -148,30 +148,46 @@ recorded_runtime_id = None
 
 def on_click(x, y, button, pressed):
     global recorded_runtime_id
-    if pressed:
-        click_data = {"x": x, "y": y, "button": str(button)}
-        print(f"Mouse click detected at: {click_data}")
-        # Ensure the click is inside the main window
-        rect = main_window.rectangle()
-        if not (rect.left <= x <= rect.right and rect.top <= y <= rect.bottom):
-            print("Click outside the target window; ignoring.")
-            return False  # Stop the listener even if click is outside
-        # Wait a short moment before recording (if needed)
-        time.sleep(0.5)
-        try:
-            clicked_elem_info = UIAElementInfo.from_point(x, y)
-        except Exception as e:
-            print("Error retrieving element info:", e)
-            return False
-        composite = generate_composite_id(clicked_elem_info)
-        print("Recorded composite ID:", composite)
-        # Extract runtime ID (the last field after splitting by '|')
-        recorded_runtime_id = composite.split("|")[-1]
-        print("Extracted runtime ID:", recorded_runtime_id)
-        return False  # Stop the mouse listener
+    try:
+        if pressed:
+            click_data = {"x": x, "y": y, "button": str(button)}
+            print(f"Mouse click detected at: {click_data}")
+            # Ensure the click is inside the main window
+            rect = main_window.rectangle()
+            if not (rect.left <= x <= rect.right and rect.top <= y <= rect.bottom):
+                print("Click outside the target window; ignoring.")
+                return False  # Stop the listener even if click is outside
+            # Wait a short moment before recording (if needed)
+            time.sleep(0.5)
+            try:
+                clicked_elem_info = UIAElementInfo.from_point(x, y)
+            except Exception as e:
+                print("Error retrieving element info:", e)
+                return False
+            composite = generate_composite_id(clicked_elem_info)
+            print("Recorded composite ID:", composite)
+            # Extract runtime ID (the last field after splitting by '|')
+            recorded_runtime_id = composite.split("|")[-1]
+            print("Extracted runtime ID:", recorded_runtime_id)
+            return False  # Stop the mouse listener
+    except Exception as e:
+        print("Error in on_click:", e)
+        return False
+def on_move(x, y):
+    pass
 
-with mouse.Listener(on_click=on_click) as m_listener:
-    m_listener.join()
+def on_scroll(x, y, dx, dy):
+    pass
+
+try:
+    with mouse.Listener(
+        on_click=on_click,
+        on_move=on_move,
+        on_scroll=on_scroll
+    ) as m_listener:
+        m_listener.join()
+except Exception as e:
+        print("Error in lick:", e)
 
 # Wait an extra second before finishing.
 time.sleep(1)

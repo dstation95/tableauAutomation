@@ -58,6 +58,59 @@ def findMarkSubOption(mark_index, suboption_index, axis_name=None):
     
     return suboption_coord
 
+def changeMarkType(mark_type, mark_index=-1, axis_name = "xAxis"):
+    """
+    Changes the mark type dynamically based on the provided mark_type and optional mark_index.
+    
+    Parameters:
+      mark_type (str): The desired mark type. For example: "Bar", "Line", "area", "Square", "Circle",
+                       "Shape", "text", "Map", "Pie", "Gantt Bar", "Polygon", "Density".
+      mark_index (int, optional): If there are multiple measures that require distinct mark type changes,
+                                  this index selects the specific instance. If None, applies the change generally.
+    
+    The function performs the following steps:
+      1. Clicks the marks dropdown.
+      2. Waits for 0.2 seconds.
+      3. Clicks the dynamically constructed marks option using executeClick.
+         For example, if mark_type is "Bar" and no index is provided, it will click "marksDropDownBar".
+      4. There are multuple options for differnet indexes, if there is no index/the index is -1, it means there are
+          no more than 2 measures per axis. If there is a 0, it means there exists an axis with 2 or more measures and
+          you want to change the mark type of All the measures. If it is any other positive index, it means you want to change
+          the mark tupe of one fo the measures of an axis that has 2 or more measures and you would indicate the axis name as well as
+          the index of the measure. THIS WOULD BE THE AXIS THAT FIRST HAD 2 MEASURES as this would be the ones you can
+          change the marks for so the axis_name should be the name of the firs taxis to have 2 or more measures and the index is the index of the measure
+          that you want to click within that axis. (it may be the first measure but it may not e the first index)
+    """
+    # Remove spaces from the mark type to form the component's identifier.
+
+    if mark_index == -1:
+      pass 
+    elif mark_index == 0:
+        # For the "All" section, use the main marks tab.
+        base_coord = findPixel("marksTabsMain", "marksTabTop", 1, False, True)
+        pyautogui.click(base_coord[0], base_coord[1])
+    else:
+        # For a specific category, use a different recorded element (for example, an axis element).
+        base_coord = findPixel(axis_name, "axis", mark_index, True)
+        pyautogui.click(base_coord[0], base_coord[1])
+        base_coord = findPixel("marksTabsMain", "marksTabTop", mark_index + 1, False, True)
+      
+    mark_type_clean = mark_type.replace(" ", "")
+    
+    # Click the marks dropdown.
+    executeClick("marksdropdown", "you shuold click the item that has a name that is either a mark/graphh type for a graph or somethign like automatic or multiple"
+      "If automaitc exists, make sure you click that over the one wiht the name shape, in addition other names could be Bar, Line, Circle, but make sure you click the name automtic if it exists in around the same area")
+    time.sleep(0.2)
+    
+    # Construct the click identifier and description based on whether an index is provided.
+    click_id = f"marksDropDown{mark_type_clean}"
+    description = (f"The associated runtime_id component should have a name component that mathces exactly wutg '{mark_type}' and be a "
+                       "ListItem and the sibling component ids should also be mark types like shapes, Bar, etc..")
+    
+    # Click the specific mark type option.
+    executeClick(click_id, description)
+
+
 # High-Level Tableau Automation Functions
 
 def DragToX(variable_name):
@@ -72,6 +125,34 @@ def DragToY(variable_name):
     Drags the given variable to the Y axis.
     """
     executeDrag("dragToY", variable_name, "m_yAxisShelf")
+
+def removeAxisVairables(axis_name, index):
+    """
+    Removes the variable from the specified axis at the given index.
+
+    Process:
+      1. Left-clicks the variable on the specified axis using executePixelClick.
+      2. Waits briefly to allow the options menu to appear.
+      3. Executes an expanded click with a guide prompt instructing the user to click the remove item.
+
+    Parameters:
+      axis_name (str): The identifier for the axis (e.g., "xAxis", "yAxis").
+      index (int): The index of the variable on the axis to remove.
+    
+    Returns:
+      tuple: The (x, y) coordinate returned from the expanded click on the remove option.
+    """
+    # Step 1: Left-click the variable on the given axis.
+    variable_coord = executePixelClick(axis_name, "axis", index, True)
+    # Allow a brief pause for the options menu to appear.
+    import time
+    time.sleep(0.2)
+    
+    # Step 2: Execute an expanded click with a guide message to remove the variable.
+    guide_message = "returnt the runtime_id of THE REMOVE ITEM to remove the axis variable"
+    remove_coord = executeExpandedClick("", guide_message)
+    
+    return remove_coord
 
 
 def DragToColor(variable_name, index, axis_name=None):
@@ -174,6 +255,48 @@ def DragToDetail(variable_name, index, axis_name=None):
         executeRelativeClick("zero", 1, value[0], value[1])
     executeDrag("dragToDetails", variable_name, "TableuButton:details")
 
+def removeMarkVariable(mark_index, suboption_index, axis_name=None):
+    """
+    Removes a variable from the marks card based on the provided mark option and variable index.
+
+    Parameters:
+      mark_index (int): Determines which marks tab to use. Use -1 to skip pre-click (defaulting to the 'All' option if it's the only one),
+      0 to explicitly use the 'All' mark option when multiple exist, or a positive integer to target a specific axis.
+      suboption_index (int): The index of the variable within the selected marks option to remove.
+      axis_name (str, optional): The axis identifier to use when mark_index indicates a specific axis.
+
+    Process:
+      1. If mark_index is -1, no pre-click is done and the default 'All' option is assumed.
+         Otherwise, the function locates the base coordinate by clicking on the appropriate marks tab (using axis_name if provided).
+      2. Uses executeRelativeClick to find the suboption coordinate based on suboption_index.
+      3. Left-clicks the identified mark variable.
+      4. Waits briefly for the options menu to appear.
+      5. Executes an expanded click with a guide prompt instructing the user to click the remove item.
+
+    Returns:
+      tuple: The (x, y) coordinate from the expanded click on the remove option.
+    """
+    if mark_index == -1:
+        base_coord = findPixel("marksTabsMain", "marksTabTop", 1, False, True)
+        pyautogui.click(base_coord[0], base_coord[1])
+    elif mark_index == 0:
+        base_coord = findPixel("marksTabsMain", "marksTabTop", 1, False, True)
+        pyautogui.click(base_coord[0], base_coord[1])
+    else:
+        if axis_name is not None:
+            base_coord = findPixel(axis_name, "axis", mark_index, True)
+            pyautogui.click(base_coord[0], base_coord[1])
+            base_coord = findPixel("marksTabsMain", "marksTabTop", mark_index + 1, False, True)
+        else:
+            base_coord = findPixel("marksTabsMain", "marksTabTop", mark_index + 1, False, True)
+            pyautogui.click(base_coord[0], base_coord[1])
+    
+    suboption_coord = executeRelativeClick("markSubOptions", suboption_index, base_coord[0], base_coord[1])
+    pyautogui.click(suboption_coord[0], suboption_coord[1])
+    time.sleep(0.2)
+    guide_message = "return the runtimeId of the THE REMOVE ITEM to remove the mark variable"
+    remove_coord = executeExpandedClick("", guide_message)
+    return remove_coord
 
 def dimensionsFilterByFormula(var_to_filter, formula):
     """
@@ -226,7 +349,15 @@ def newSheet():
     """
     Opens a new clean sheet for creating a new graph.
     """
-    executeClick("newSheet")
+    executeClick("newSheet", "click the autoamtion Id containing SheetTabsWidget.m_newSheetTab")
+    # navigateSheets("new", 0)
+
+# def newSheetOriginal():
+#     """
+#     Opens a new clean sheet for creating a new graph.
+#     """
+#     # executeClick("newSheet")
+#     executeClick("clickSheet1", "Click the tab that has Sheet1")
 
 
 def sortAscending():
@@ -243,11 +374,14 @@ def sortDescending():
     executeClick("sortDescend")
 
 
+from pywinauto.keyboard import send_keys
+
 def swapXandY():
     """
     Swaps the x and y columns of the current graph.
     """
-    executeClick("swapxandy")
+    # executeClick("swapxandy")
+    send_keys("^w")
 
 def changeTitle(new_title):
     """
@@ -396,14 +530,16 @@ def changeAxisMeasure(axis_name, index, measure_type):
 
     # Step 2: Open the measure options menu.
     # According to documentation, option 9 is used to bring up the measure options.
-    options_coord = executeRelativeClick("axismeasureelement", 9, measure_coord[0], measure_coord[1])
-    time.sleep(0.2)
+    # options_coord = executeRelativeClick("axismeasureelement", 9, measure_coord[0], measure_coord[1])
+    # time.sleep(0.2)
+    executeExpandedClick("", "Click the item that contians the Measure(__)")
     
     # Step 3: Use the mapping to select the desired measure type.
     option_index = measure_mapping[mtype]
-    final_coord = executeRelativeClick("measuresuboption", option_index, options_coord[0], options_coord[1])
+    # final_coord = executeRelativeClick("measuresuboption", option_index, options_coord[0], options_coord[1])
+    executeExpandedClick("", f"Click the item that contians name with {measure_type}")
     
-    return final_coord
+    # return final_coord
 
 
 def showTrendLine():
@@ -664,6 +800,7 @@ def changeAggregation():
 
     base_coord = executeRelativeClick("analysisPaneSuboptions", 2, base_coord[0], base_coord[1])
     time.sleep(0.2)
+    time.sleep(7)
 
 def createBarChart(x_vars, y_vars):
     """
@@ -692,7 +829,8 @@ def createBarChart(x_vars, y_vars):
         time.sleep(0.1)
     
     # Switch to the horizontal bar chart view (index 7 as per mapping).
-    switchGraph(7)
+    # switchGraph(7)
+    changeMarkType("Bar")
     
 
 def createScatterChart(x_vars, y_vars):
@@ -721,7 +859,8 @@ def createScatterChart(x_vars, y_vars):
         time.sleep(0.1)
     
     # Switch to scatter plot view (e.g., "scatter plot" which maps to index 19).
-    switchGraph("scatter plot")
+    # switchGraph("scatter plot")
+    changeMarkType("Circle")
 
     changeAggregation()
 
@@ -757,7 +896,30 @@ def createLineChart(x_vars, y_vars, date_function="DATETRUNC", date_component="m
     changeDateType("xAxis", 1, date_function, date_component)
     
     # Switch to continuous line chart view.
-    switchGraph("continuous line chart")
+    # switchGraph("continuous line chart")
+    changeMarkType("Line")
+    
+    # Adjust the X-axis date display.
+    # Here, we assume the time variable is the first element on the X axis.
+
+def createAreaChart(x_vars, y_vars, date_function="DATETRUNC", date_component="month"):
+    """
+
+    """
+    # newSheet()
+    if not x_vars or not y_vars:
+        print("Both an X-axis (time-based) variable and a Y-axis variable must be provided.")
+        return
+    
+    # Drag the first X variable (time-based) and first Y variable.
+    DragToX(x_vars[0])
+    DragToY(y_vars[0])
+    time.sleep(0.2)
+
+    changeDateType("xAxis", 1, date_function, date_component)
+    
+    # Switch to continuous line chart view.
+    changeMarkType("Area")
     
     # Adjust the X-axis date display.
     # Here, we assume the time variable is the first element on the X axis.
@@ -780,9 +942,114 @@ def navigateSheetsBackwards(quantity):
     """
     navigateSheets("backwards", quantity)
 
+import keyboard
+
+def fullScreen():
+  keyboard.press('win')
+  keyboard.press('up')
+  time.sleep(0.1)
+  keyboard.release('up')
+  keyboard.release('win')
+
+def removeMarkVariable(mark_index, suboption_index, axis_name=None):
+    """
+    Removes a variable from the marks card based on the provided mark option and variable index.
+
+    Parameters:
+      mark_index (int): Determines which marks tab to use. Use -1 to skip pre-click (defaulting to the 'All' option if it's the only one),
+      0 to explicitly use the 'All' mark option when multiple exist, or a positive integer to target a specific axis.
+      suboption_index (int): The index of the variable within the selected marks option to remove.
+      axis_name (str, optional): The axis identifier to use when mark_index indicates a specific axis.
+
+    Process:
+      1. If mark_index is -1, no pre-click is done and the default 'All' option is assumed.
+         Otherwise, the function locates the base coordinate by clicking on the appropriate marks tab (using axis_name if provided).
+      2. Uses executeRelativeClick to find the suboption coordinate based on suboption_index.
+      3. Left-clicks the identified mark variable.
+      4. Waits briefly for the options menu to appear.
+      5. Executes an expanded click with a guide prompt instructing the user to click the remove item.
+
+    Returns:
+      tuple: The (x, y) coordinate from the expanded click on the remove option.
+    """
+
+    #     if mark_index == 0:
+    #     # For the "All" section, use the main marks tab.
+    #     base_coord = findPixel("marksTabsMain", "marksTabTop", 1, False, True)
+    #     pyautogui.click(base_coord[0], base_coord[1])
+    # else:
+    #     # For a specific category, use a different recorded element (for example, an axis element).
+    #     base_coord = findPixel(axis_name, "axis", mark_index, True)
+    #     pyautogui.click(base_coord[0], base_coord[1])
+    #     base_coord = findPixel("marksTabsMain", "marksTabTop", mark_index + 1, False, True)
+
+
+
+        
+    if mark_index == -1:
+        # base_coord = findPixel("marksTabsMain", "marksTabTop", 1, False, True)
+        # pyautogui.click(base_coord[0], base_coord[1])\
+      base_coord = findPixel("markalloptionwidget", "marksuboptions", suboption_index, False, True)
+      pyautogui.rightClick( base_coord[0], base_coord[1])
+      executeExpandedClick("","make sure to return the remvoe item and make sue you reutrn the runtiem Id of the element that has the name of remove")
+      return
+    elif mark_index == 0:
+        base_coord = findPixel("marksTabsMain", "marksTabTop", 1, False, True)
+        pyautogui.click(base_coord[0], base_coord[1])
+    else:
+        if axis_name is not None:
+            base_coord = findPixel(axis_name, "axis", mark_index, True)
+            pyautogui.click(base_coord[0], base_coord[1])
+            base_coord = findPixel("marksTabsMain", "marksTabTop", mark_index + 1, False, True)
+        else:
+            # base_coord = findPixel("marksTabsMain", "marksTabTop", mark_index + 1, False, True)
+            # pyautogui.click(base_coord[0], base_coord[1])
+            pass
+
+    
+    base_coord = findPixel("marksuboptionwidget", "marksuboptions", suboption_index, False, True)
+    pyautogui.rightClick( base_coord[0], base_coord[1])
+    executeExpandedClick("","make sure to return the remvoe item and make sue you reutrn the runtiem Id of the element that has the name of remove")
+
+    # suboption_coord = executeRelativeClick("markSubOptions", suboption_index, base_coord[0], base_coord[1])
+    # pyautogui.click(suboption_coord[0], suboption_coord[1])
+    # time.sleep(0.2)
+    # guide_message = "return the runtimeId of the THE REMOVE ITEM to remove the mark variable"
+    # remove_coord = executeExpandedClick("", guide_message)
+    # return remove_coord
+
+
+
 
 def main():
     print("Main controller for execute functions.")
+    # removeAxisVairables("xAxis", 1)
+    removeMarkVariable(-1, 1)
+    # fullScreen()
+    # newSheet()
+    # createBarChart(x_vars=["OP_UNIQUE_CARRIER"], y_vars=["DEP_DELAY"])
+    # DragToColor("OP_UNIQUE_CARRIER", -1)
+    # DragToLabel("DEP_DELAY", -1)
+    # swapXandY()
+    # changeAxisMeasure("yAxis", 1, "AVERAGE")
+    # sortDescending()
+    # changeTitle("Average Departure Delay by Carrier")
+    # newSheet()
+    # createBarChart(x_vars=["OP_UNIQUE_CARRIER"], y_vars=["ARR_DELAY"])
+    # DragToColor("OP_UNIQUE_CARRIER", -1)
+    # DragToLabel("ARR_DELAY", -1)
+    # changeAxisMeasure("yAxis", 1, "AVERAGE")
+    # sortDescending()
+    # changeTitle("Average Arrival Delay by Carrier")
+    # newSheet()
+    # createBarChart(x_vars=["ORIGIN_STATE_ABR"], y_vars=["FL_DATE"])
+    # DragToColor("ORIGIN_STATE_ABR", -1)
+    # DragToLabel("FL_DATE", -1)
+    # changeAxisMeasure("yAxis", 1, "COUNT")
+    # sortDescending()
+    # changeTitle("Number of Flights by Origin State")
+    # createAreaChart(["Order_Date"],["Sales"])
+    # fullScreen()
     # Example usage:
     # DragToX("Cancelled")
     # DragToY("Origin")

@@ -1,0 +1,5 @@
+File Analysis Summary
+===================
+Original filename: StoreData.csv
+File size: 2283431 bytes
+Status: Processing Complete

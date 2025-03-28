@@ -33,21 +33,28 @@ def generate_composite_id(elem_info):
     rt_str = runtime_id_to_str(elem_info.runtime_id)
     return f"{control_type}|{class_name}|{auto_id}|{name}|{rect_str}|{rt_str}"
 
-def dump_direct_children(elem_info):
+def dump_direct_children(elem_info, depth=5):
     """
     Returns a list of dictionaries representing the immediate children
     of the provided element, each with its composite ID.
     """
-    direct_children = []
+    if depth == 0:
+        return None  # Stop recursion when depth limit is reached
+
     try:
         children = elem_info.children()
     except Exception:
         children = []
+
+    child_list = []
     for child in children:
-        direct_children.append({
-            "composite": generate_composite_id(child)
-        })
-    return direct_children
+        child_data = {
+            "composite": generate_composite_id(child),
+            "children": dump_direct_children(child, depth - 1)  
+        }
+        child_list.append(child_data)
+
+    return child_list  
 
 def load_json_examples(filename):
     if os.path.exists(filename):
@@ -120,9 +127,9 @@ def executeExpandedClick(task_name, guide=""):
         sys.exit(1)
     
     # Filter to find the window whose title is exactly "Tableau"
-    tableau_windows = [w for w in all_windows if w.window_text().strip() == "Tableau"]
+    tableau_windows = [w for w in all_windows if w.window_text().strip() == "Tableau Public"]
     if not tableau_windows:
-        print("No window with title 'Tableau' found.")
+        print("No window with title 'Tableau' found for expanded.")
         sys.exit(1)
     
     # Use the first window found with the exact title "Tableau"

@@ -125,7 +125,7 @@ def executeTitleChange(task_name, title_name):
     # ------------------------------------------------------------
     # Connect to the Target Application Window (e.g., Tableau)
     # ------------------------------------------------------------
-    windows = Desktop(backend="uia").windows(title_re=".*Tableau - B.*", visible_only=True)
+    windows = Desktop(backend="uia").windows(title_re=".*Tableau Public - B.*", visible_only=True)
     if not windows:
         print("No Tableau window found.")
         sys.exit(1)
