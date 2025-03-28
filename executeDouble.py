@@ -7,7 +7,7 @@ from pywinauto import Desktop
 import openai
 
 # Set OpenAI API credentials and model name
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 MODEL_NAME = "gpt-4o-mini-2024-07-18"
 
 def executeDouble(base_filename):
