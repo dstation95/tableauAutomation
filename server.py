@@ -52,7 +52,7 @@ UPLOAD_FOLDER = 'uploads'
 os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 # Set your OpenAI API key and model (adjust as needed)
-openai.api_key = "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"
+openai.api_key = os.environ.get("OPENAI_API_KEY")
 MODEL_NAME = "o1-mini-2024-09-12"
 
 # Global variable to hold the current state of the Tableau screen.
